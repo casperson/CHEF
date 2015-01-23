@@ -1,0 +1,12 @@
+body{
+    background-image: url("/static/homepage/media/cream_background.png");
+}
+
+header {
+    padding: 24px 0;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.8em;
+    color: #F4F4F4;
+    background-color: cornflowerblue;
+}

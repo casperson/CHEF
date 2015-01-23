@@ -1,0 +1,79 @@
+## this is the skeleton of all pages on in this app - it defines the basic html tags
+
+## set up a StaticRenderer object to enable the CSS/JS automatic inclusion magic.
+<%! from django_mako_plus.controller import static_files %>
+<%  static_renderer = static_files.StaticRenderer(self) %>
+
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+
+        <title>homepage</title>
+
+        ## add any site-wide scripts or CSS here; for example, jquery:
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+        ## fonts
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+
+        ## adding bootstrap
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+        ## render the css with the same name as this page
+        ${ static_renderer.get_template_css(request, context)  }
+
+    </head>
+
+    <body>
+
+        <header>
+            <link rel="icon" type="image/x-icon" href="/static/homepage/media/colonial_flag.jpg" />
+            <div class="container-fluid">
+                <div class="col-xs-4" style="text-align: right" >
+                    <img src="/static/homepage/media/colonial_flag.jpg" alt="..." height="110" >
+                </div>
+                <div class="col-xs-6" style="text-align: left">
+                    <p class="row">Colonial Heritage Foundation</p>
+                    <p style="font-size: .5em" class="row">Preserving America&#39s Founding</p>
+                </div>
+                <div class="col-xs-2"></div>
+            </div>
+        </header>
+
+        <div class="container-fluid">
+            <div>
+                <ul class="nav nav-tabs">
+                    <li role="menu"><a href="/homepage/index/">Home</a></li>
+##                    <li role="menu"><a href="/homepage/index/">Home</a></li>
+##                    <li role="menu"><a href="/homepage/index/">Home</a></li>
+                    <li role="menu"><a href="/homepage/about/">About</a></li>
+                    <li role="menu"><a href="/homepage/contact/">Contact</a></li>
+                    <li role="menu"><a href="/homepage/terms/">Terms of Service <span class="badge">Updated</span></a></li>
+                </ul>
+            </div>
+##            <div class="col-xs-2" style="border-right: lightslategray solid 1px; margin-top: 5px">
+##                <%block name="content_left">
+##                    <div>
+##                        <ul class="nav nav-pills nav-stacked">
+##                            <li role="menu"><a href="/homepage/index/">Home</a></li>
+##                            <li role="menu"><a href="/homepage/about/">About</a></li>
+##                            <li role="menu"><a href="/homepage/contact/">Contact</a></li>
+##                            <li role="menu"><a href="/homepage/terms/">Terms of Service <span class="badge">Updated</span></a></li>
+##                        </ul>
+##                    </div>
+##                </%block>
+##            </div>
+            <div class="col-xs-10">
+                <%block name="content_center">
+                    This is the center stuff!
+                </%block>
+            </div>
+        </div>
+
+        ## render the JS with the same name as this page
+        ${ static_renderer.get_template_js(request, context)  }
+
+    </body>
+</html>

@@ -138,7 +138,7 @@ class WardrobeItem(Item):
     size = models.CharField(max_length=8, blank=False)
     size_modifier = models.CharField(max_length=20)
     GENDER = (
-        ('M','Men'),
+        ('M', 'Men'),
         ('W', 'Women'),
         ('U', 'Unisex'),
     )

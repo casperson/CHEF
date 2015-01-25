@@ -4,9 +4,9 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1422132466.91195
+_modified_time = 1422159970.505429
 _enable_loop = True
-_template_filename = 'C:\\Users\\Braden\\chef\\homepage\\templates/index.html'
+_template_filename = 'C:\\Users\\Garrett\\PycharmProjects\\CHEF\\homepage\\templates/index.html'
 _template_uri = 'index.html'
 _source_encoding = 'ascii'
 import os, os.path, re
@@ -47,7 +47,7 @@ def render_content_center(context,**pageargs):
         def content_center():
             return render_content_center(context)
         __M_writer = context.writer()
-        __M_writer('\r\n    <div class="container-fluid">\r\n        <div class="col-xs-2"></div>\r\n        <div class="col-xs-8" style="margin-top: 10px"><img src="/static/homepage/media/colonial_flag.jpg" height="400"></div>\r\n        <div class="col-xs-2"></div>\r\n    </div>\r\n')
+        __M_writer('\r\n    <div class="container-fluid">\r\n        <h1>The Colonial Heritage Foundation</h1>\r\n        <p>The Colonial Heritage Foundation (the Foundation) is a 501(c)(3) corporation dedicated to the preservation of the values, culture, skills and history of America\'s founding. To accomplish this mission, the Foundation engages in a broad array of activities. Among these are the development and presentation of educational exhibits, the coordination of reading and discussion groups to encourage the study of America\'s historical writings, the presentation of lectures and seminars regarding America\'s founding era, the coordination of historical reenactments and skill demonstrations, and the coordination of internships and apprenticeships that teach the occupational skills of early America.</p>\r\n        <br/>\r\n        <h3>Education Exhibits</h3>\r\n        <p>At its heart, the Foundation is an educational institution.  One of its major undertakings is developing exhibits and programs that can help bring to life the history surrounding America\'s colonial period and is founding generation.  To this end, the Foundation has developed a variety of traveling exhibits.  One exhibit is focuses on the importance of the press in the American Revolution and of the continued importance of a free press in America today.  The central artifact of this exhibit is a replica of the Isaiah Thomas Press, an 18th century press that was influential building support for American independence.</p>\r\n        <br/>\r\n        <p>Another exhibit focuses on the early colonial period and the ides of self-government that were planted in Jamestowne and Plimoth.  At the center of this exhibit is a scale model of the Mayflower. The exhibit also includes replicas of various artifacts from the early colonial period.</p>\r\n        <br/>\r\n        <h3>Workshops, Lectures, and Seminars</h3>\r\n        <p>The Foundation sponsors lectures, seminars and workshops about the values, culture, skills, and history of America\'s founding era. Such events may be coordinated with universities and other educationally-focused organizations to educate adults about the sacrifices that early Americans made to provide today\'s population with the freedoms we enjoy. These events  seek to inspire individuals to engage in community-based educational activities to increase exposure an awareness of the history surrounding America\'s founding. Lectures, seminars and workshops are coordinated and presented year-round by Foundation volunteers. Depending on the venue, they are offered either free of charge or for a fee. </p>\r\n        <br/>\r\n        <h3>Reading and Discussion Groups</h3>\r\n        <p>The Foundation coordinates and helps to establish community groups to encourage the reading and discussion of America\'s historical documents. For example, the Federalist Papers and the Anti-federalist Papers were publications that made the argument for and against the adoption of America\'s current constitution. The study and discussion of these documents can help Americans today understand the issues that were of most concern to our founding generation regarding the establishment of a strong federal government. These documents were written in a language style that is foreign to most contemporary readers. By providing recommended reading schedules, discussion questions, and materials to help modern readers read and grasp federal-period writings, the Foundation hopes to encourage small, community-based groups to undertake independent study of such founding documents. These discussion groups will be conducted year-round by volunteers and held in homes or community meeting places throughout the nation. </p>\r\n        <br/>\r\n        <div class="col-xs-8" style="margin-top: 10px; margin-left: 400px"><img src="/static/homepage/media/colonial_flag.jpg" height="400"></div>\r\n    </div>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -55,6 +55,6 @@ def render_content_center(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "ascii", "uri": "index.html", "filename": "C:\\Users\\Braden\\chef\\homepage\\templates/index.html", "line_map": {"56": 50, "34": 1, "27": 0, "44": 3, "50": 3}}
+{"source_encoding": "ascii", "filename": "C:\\Users\\Garrett\\PycharmProjects\\CHEF\\homepage\\templates/index.html", "line_map": {"56": 50, "34": 1, "27": 0, "44": 3, "50": 3}, "uri": "index.html"}
 __M_END_METADATA
 """

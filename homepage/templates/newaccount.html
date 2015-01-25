@@ -9,13 +9,13 @@
   <div class="form-group">
     <label for="firstName" class="col-sm-2 control-label">First Name</label>
     <div class="col-sm-10">
-      <input type="firstName" class="form-control" id="firstName" placeholder="First Name" style="width: 50%">
+      <input type="text" class="form-control" id="firstName" placeholder="First Name" style="width: 50%">
     </div>
   </div>
   <div class="form-group">
     <label for="lastName" class="col-sm-2 control-label">Last Name</label>
     <div class="col-sm-10">
-      <input type="lastName" class="form-control" id="lastName" placeholder="Last Name" style="width: 50%">
+      <input type="text" class="form-control" id="lastName" placeholder="Last Name" style="width: 50%">
     </div>
   </div>
   <div class="form-group">
@@ -35,14 +35,14 @@
   <div class="form-group">
     <label for="address" class="col-sm-2 control-label">Address</label>
     <div class="col-sm-10">
-      <input type="address" class="form-control" id="address" placeholder="Address" style="width: 50%">
+      <input type="text" class="form-control" id="address" placeholder="Address" style="width: 50%">
     </div>
   </div>
 
   <div class="form-group">
     <label for="city" class="col-sm-2 control-label">City</label>
     <div class="col-sm-10">
-      <input type="city" class="form-control" id="city" placeholder="City" style="width: 50%">
+      <input type="text" class="form-control" id="city" placeholder="City" style="width: 50%">
     </div>
   </div>
   <div class="form-group">
@@ -53,39 +53,62 @@
      </select>
     </div>
   </div>
-
-
-
   <div class="form-group">
-    <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+    <label for="zip" class="col-sm-2 control-label">Zip</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+      <input type="text" class="form-control" id="zip" placeholder="Zip Code" style="width: 20%">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPassword" class="col-sm-2 control-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+    <label for="country" class="col-sm-2 control-label">Country</label>
+    <div class="col-sm-10" >
+     <select class="form-control" style="width: 20%">
+         <option>United States</option>
+     </select>
     </div>
   </div>
   <div class="form-group">
-    <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+    <label for="tel" class="col-sm-2 control-label">Telephone</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+      <input type="tel" class="form-control" id="tel" placeholder="Telephone" style="width: 30%">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="role" class="col-sm-2 control-label">Role</label>
+    <div class="col-sm-10" >
+     <select class="form-control" style="width: 30%">
+         <option>Volunteer</option>
+     </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="squestion" class="col-sm-2 control-label">Security Question</label>
+    <div class="col-sm-10" >
+     <select class="form-control" style="width: 50%">
+         <option>What is your mother's maiden name?</option>
+     </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Answer" class="col-sm-2 control-label">Security Question Answer</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="Answer" placeholder="Security Question Answer" style="width: 50%">
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <div class="checkbox">
         <label>
-          <input type="checkbox"> Remember me
+          <input type="checkbox"> Receive email news and updates
         </label>
       </div>
     </div>
   </div>
   <div class="form-group">
-    <div class="col-sm-offset-10 col-sm-10">
-      <button type="submit" class="btn btn-default">Create Account</button>
+    <div class="col-sm-offset-6 col-sm-10">
+      <button type="primary" class="btn btn-default">Create Account</button>
     </div>
   </div>
 </form>

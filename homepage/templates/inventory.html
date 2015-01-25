@@ -1,0 +1,51 @@
+<%inherit file="base.htm" />
+
+<%block name="content_center">
+    <div>
+        <h2 style="text-decoration: underline">Inventory</h2>
+        <ul class="nav nav-tabs" style="background-color: white">
+            <li role="menu"><a href="/homepage/index/">Item</a></li>
+            <li role="menu"><a href="/homepage/inventory/">Product</a></li>
+        </ul>
+        <button class="btn btn-success" style="margin: 5px 0px 15px 0px;">Add item</button>
+        <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+            <thead>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Value</th>
+                <th>Rental Price</th>
+                <th>Size</th>
+                <th>Size Modifier</th>
+                <th>Gender</th>
+                <th>Color</th>
+                <th>Pattern</th>
+                <th>Start Year</th>
+                <th>End Year</th>
+                <th>Note</th>
+                <th>Edit/Delete</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Blue Britches</td>
+                    <td>A pair of blue cotton britches</td>
+                    <td>$35.00</td>
+                    <td>$3.00</td>
+                    <td>M</td>
+                    <td>-</td>
+                    <td>Male</td>
+                    <td>Blue</td>
+                    <td>Striped</td>
+                    <td>1820</td>
+                    <td>1850</td>
+                    <td></td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
+                            <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</%block>

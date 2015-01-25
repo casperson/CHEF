@@ -1,12 +1,45 @@
 body{
-    background-image: url("/static/homepage/media/cream_background.png");
+    /*background-image: url("/static/homepage/media/cream_background.png");*/
+}
+
+.container-fluid{
+    padding: 0px;
+}
+
+.base-body{
+    background-color: #ffffff;
+}
+
+h2{
+    font-family: 'Roboto Slab', serif;
+}
+
+
+.div-head{
+    /*background-image: -webkit-gradient(*/
+        /*linear,*/
+        /*left bottom,*/
+        /*left top,*/
+        /*color-stop(0, #FFFFFF),*/
+        /*color-stop(1, #000080)*/
+    /*);*/
+    /*background-image: -o-linear-gradient(top, #FFFFFF 0%, #000080 100%);*/
+    /*background-image: -moz-linear-gradient(top, #FFFFFF 0%, #000080 100%);*/
+    /*background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #000080 100%);*/
+    /*background-image: -ms-linear-gradient(top, #FFFFFF 0%, #000080 100%);*/
+    /*background-image: linear-gradient(to top, #FFFFFF 0%, #000080 100%);*/
+    background-color: navy;
+    margin-bottom: 7px;
+    height: 10px;
 }
 
 header {
-    padding: 24px 0;
+    /*background-image: url("/static/homepage/media/cream_background.png");*/
+    /*padding: 24px 0;*/
     text-align: center;
-    font-family: 'Roboto Slab', serif;
-    font-size: 2.8em;
-    color: #F4F4F4;
-    background-color: cornflowerblue;
+    /*font-family: 'Pinyon Script', serif;*/
+    /*font-size: 2.8em;*/
+    color: navy;
+    /*background-color: #FFFFFF;*/
+    font-weight: bold;
 }

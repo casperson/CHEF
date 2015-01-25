@@ -7,8 +7,13 @@ body{
 }
 
 .base-body{
-    background-color: lightgray;
+    background-color: #ffffff;
 }
+
+h2{
+    font-family: 'Roboto Slab', serif;
+}
+
 
 .div-head{
     /*background-image: -webkit-gradient(*/
@@ -37,8 +42,4 @@ header {
     color: navy;
     /*background-color: #FFFFFF;*/
     font-weight: bold;
-}
-
-.nav{
-    color: navy
 }

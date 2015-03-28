@@ -4,10 +4,10 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1422155619.247751
+_modified_time = 1423360079.963671
 _enable_loop = True
-_template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\homepage\\templates/index3.html'
-_template_uri = 'index3.html'
+_template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\homepage\\templates/index2.html'
+_template_uri = 'index2.html'
 _source_encoding = 'ascii'
 import os, os.path, re
 _exports = ['content_center']
@@ -23,7 +23,7 @@ def _mako_generate_namespaces(context):
     pass
 def _mako_inherit(template, context):
     _mako_generate_namespaces(context)
-    return runtime._inherit_from(context, 'base.htm', _template_uri)
+    return runtime._inherit_from(context, 'base2.htm', _template_uri)
 def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
@@ -55,6 +55,6 @@ def render_content_center(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\homepage\\templates/index3.html", "line_map": {"56": 50, "34": 1, "27": 0, "44": 3, "50": 3}, "uri": "index3.html", "source_encoding": "ascii"}
+{"filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\homepage\\templates/index2.html", "source_encoding": "ascii", "line_map": {"56": 50, "34": 1, "27": 0, "44": 3, "50": 3}, "uri": "index2.html"}
 __M_END_METADATA
 """

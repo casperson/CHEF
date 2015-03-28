@@ -2,134 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007a9a1c-1da8-4647-bc5d-e299c0b4b3aa" name="Default" comment="Sterling's Update from Sprint2 Sprint 3 stuff">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/media/Custom Ship Replica.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/media/Custom Top Hat.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/media/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/media/Top Hat.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/media/Toy Sword.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/UserEditForm.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/views/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/management/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/management/commands/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/views/__init__.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/account.changepassword.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/templates/account.changepassword.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/scripts/account.changepassword.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/account.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/templates/account.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/scripts/account.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/views/account.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/base.htm.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/homepage/templates/base.htm.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/base.htm.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/homepage/templates/base.htm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/templates/base.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/base.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/scripts/base.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/base.loginform.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/base.loginform.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/scripts/base.loginform.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/views/base.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/base2.htm.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/base2.html.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/homepage/templates/base_ajax.htm.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/base_ajax.htm.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/base_ajax.htm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/templates/base_ajax.htm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/base_ajax.htm" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/check_rentals.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/check_rentals.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/management/commands/check_rentals.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/index.html.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/index.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/index.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/index2.html.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/index3.html.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/index3.html.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/index3.loginform.html.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/index3.loginform.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/init_db.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/item.edit.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/item.edit.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/item.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/item.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/views/item.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/media/jquery.form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/media/jquery.loadmodal.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/login.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/views/login.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/views/logout.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/models.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/order.confirmation.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/order.confirmation.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/person.edit.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/person.edit.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/person.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/person.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/phone.edit.html.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/phone.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/styles/product.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/styles/product.detail.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/product.detail.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/product.detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/scripts/product.detail.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/product.edit.html.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/product.edit.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/product.edit.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/product.edit_line_item.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/product.edit_line_item.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/product.html.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/product.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/product.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/scripts/product.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/views/product.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/product.search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/styles/product.shoppingcart.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/product.shoppingcart.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/product.shoppingcart.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/scripts/product.shoppingcart.jsm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/scripts/product.shoppingcart.jsm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/media/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/scripts/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/styles/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/media/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/scripts/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/styles/readme.md" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/rental.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/rental.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/scripts/rental.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/rental.manage.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/rental.manage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/views/rental.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/rental.returnitem.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/rental.returnitem.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/user.edit.html.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/user.edit.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/templates/user.edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/scripts/user.edit.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/user.html.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/user.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/templates/user.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/scripts/user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/views/user.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/venue.edit.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/venue.edit.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/venue.html.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/venue.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/views/venue.py" />
-      <change type="DELETED" beforePath="C:\Users\Sterling\Documents\GitHub\CHEF\homepage\templates\log_in.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/cached_templates/templates/account.html.py" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/account.html.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/styles/base.css" afterPath="$PROJECT_DIR$/homepage/styles/base.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/cached_templates/templates/base.htm.py" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/base.htm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/templates/base.htm" afterPath="$PROJECT_DIR$/homepage/templates/base.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/cached_templates/templates/index.html.py" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/index.html.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/templates/inventory.html" afterPath="$PROJECT_DIR$/homepage/templates/inventory.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/models.py" afterPath="$PROJECT_DIR$/homepage/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chef/settings.py" afterPath="$PROJECT_DIR$/chef/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="chef.iws" />
@@ -225,8 +146,8 @@
       <file leaf-file-name="base.htm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homepage/templates/base.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6824743" vertical-offset="0" max-vertical-offset="1649">
-              <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.43917525" vertical-offset="1011" max-vertical-offset="1649">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -782,7 +703,13 @@
       <option name="project" value="LOCAL" />
       <updated>1422161435812</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Sterling's Update from Sprint2 Sprint 3 stuff">
+      <created>1427581187325</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1427581187325</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -812,7 +739,8 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21715818" sideWeight="0.4990619" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27673796" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2620321" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -821,7 +749,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2620321" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16353887" sideWeight="0.50093806" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -871,7 +798,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="models.py file" />
-    <option name="LAST_COMMIT_MESSAGE" value="models.py file" />
+    <MESSAGE value="Sterling's Update from Sprint2 Sprint 3 stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sterling's Update from Sprint2 Sprint 3 stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1262,8 +1190,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homepage/templates/base.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6824743" vertical-offset="0" max-vertical-offset="1649">
-          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.43917525" vertical-offset="1011" max-vertical-offset="1649">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
       </provider>

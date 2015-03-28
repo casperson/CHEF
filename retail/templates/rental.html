@@ -1,0 +1,43 @@
+<%inherit file="/homepage/templates/base.htm" />
+
+<%block name="content_center">
+
+    <div>
+        <h3 style="text-decoration: underline">Rentable Items</h3>
+
+        <form id="search" method="post" action="rental.search">
+            <input type="text" placeholder=" Search"/>
+        </form>
+
+        <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+            <tr>
+                <th>Rentable Item ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Rental Price</th>
+                <th>Price Per Day</th>
+                <th></th>
+            </tr>
+             %for RentableItem in rentableitems:
+                <tr>
+                    <td>${ RentableItem.id }</td>
+                    <td>${ RentableItem.name }</td>
+                    <td>${ RentableItem.description }</td>
+                    <td>${ RentableItem.rental_price }</td>
+                    <td>${ RentableItem.price_per_day }</td>
+##                    <td><a href="/retail/rental.rentitem/${ RentableItem.id }/" class="btn btn-warning">Rent Item</a></td>
+                    <td>
+                        <a data-pid="${ RentableItem.id }"  class="btn btn-warning shopping_cart_dialog3">Add To Cart</a>
+                    </td>
+##                    <td>
+##                        <div class="btn-group"  role="group" aria-label="...">
+##href="/retail/rental.create_rentalline_item/${ RentableItem.id }"
+                    ##                            <a href="/retail/product.edit/${ RentableItem.id }/" type="button"  class="btn btn-default"><i class="fa fa-edit"></i></a>
+##                            <a href="/retail/product.delete/${ RentableItem.id }/" type="button" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+##                        </div>
+##                    </td>
+                </tr>
+             %endfor
+        </table>
+    </div>
+</%block>

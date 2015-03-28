@@ -5,8 +5,8 @@
     <div>
         <h2 style="text-decoration: underline">Inventory</h2>
         <ul class="nav nav-tabs" style="background-color: white">
-            <li role="menu"><a href="/homepage/index/">Item</a></li>
-            <li role="menu"><a href="/homepage/inventory/">Product</a></li>
+            <li role="menu"><a href="/homepage/item/">Item</a></li>
+            <li role="menu"><a href="/homepage/product/">Product</a></li>
         </ul>
 
         <button class="btn btn-success" href="#addItem" style="margin: 5px 0px 15px 0px;" type="button" data-toggle="modal" data-target="#form-modal" >Add item</button>
@@ -16,30 +16,15 @@
                 <th>Description</th>
                 <th>Value</th>
                 <th>Rental Price</th>
-                <th>Size</th>
-                <th>Size Modifier</th>
-                <th>Gender</th>
-                <th>Color</th>
-                <th>Pattern</th>
-                <th>Start Year</th>
-                <th>End Year</th>
-                <th>Note</th>
                 <th>Edit/Delete</th>
             </thead>
             <tbody>
+             %for item in items:
                 <tr>
-                    <td>Blue Britches</td>
-                    <td>A pair of blue cotton britches</td>
-                    <td>$35.00</td>
-                    <td>$3.00</td>
-                    <td>M</td>
-                    <td>-</td>
-                    <td>Male</td>
-                    <td>Blue</td>
-                    <td>Striped</td>
-                    <td>1820</td>
-                    <td>1850</td>
-                    <td></td>
+                    <td>${ item.name }</td>
+                    <td>${ item.description }</td>
+                    <td>${ item.value }</td>
+                    <td>${ item.standard_rental_price }</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="...">
                             <button type="button" class="btn btn-default"><i class="fa fa-edit"></i></button>
@@ -47,6 +32,7 @@
                         </div>
                     </td>
                 </tr>
+             %endfor
             </tbody>
         </table>
     </div>

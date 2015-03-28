@@ -1,9 +1,9 @@
 body{
-    /*background-image: url("/static/homepage/media/cream_background.png");*/
+    height: 100%;
 }
 
 .container-fluid{
-    padding: 0px;
+    padding: 0;
 }
 
 .base-body{
@@ -14,6 +14,25 @@ h2{
     font-family: 'Roboto Slab', serif;
 }
 
+h3{
+    font-family: 'Roboto Slab', serif;
+    color: #231E5D;
+}
+
+.right-align{
+    position: absolute;
+    right: 0px;
+}
+
+.email-header{
+    border-bottom: solid 1px grey;
+    height: 75px;
+    margin-top: 10px;
+}
+
+.email-body{
+    border-bottom: solid 1px grey;
+}
 
 .div-head{
     /*background-image: -webkit-gradient(*/
@@ -43,3 +62,29 @@ header {
     /*background-color: #FFFFFF;*/
     font-weight: bold;
 }
+
+.receipt-table{
+    border-bottom: solid 1px grey;
+}
+
+.right-align{
+    margin-right: 15px;
+    text-align: right;
+}
+
+.receipt{
+    font-size: 1.5em;
+}
+
+/*main{*/
+    /*position: relative;*/
+/*}*/
+
+.side-div{
+    background-color: #231E5D;
+    height: 1500px;
+}
+
+/*.middle-div{*/
+    /*position: relative;*/
+/*}*/

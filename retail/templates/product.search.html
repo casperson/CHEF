@@ -1,0 +1,58 @@
+<%inherit file="../../homepage/templates/base.htm"/>
+
+<%block name="content_center">
+
+    <form method="POST">
+        <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+            <thead>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Quantity On Hand</th>
+                <th>Current Price</th>
+                <th>Details</th>
+                <th>Edit/Delete</th>
+            </thead>
+            <tbody>
+             %for product in products:
+                <tr>
+                    <td>${ product.id}</td>
+                    <td>${ product.name }</td>
+                    <td>${ product.description }</td>
+                    <td>${ product.qty_on_hand }</td>
+                    <td>${ product.price }</td>
+                    <td><a href="/retail/product.detail/${ product.id }/" class="btn btn-info">Show Details</a></td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="...">
+                        <a type="button" class="btn btn-default" href="/retail/product.edit/${ product.id }/"><i class="fa fa-edit"></i></a>
+                        <button type="button" data-toggle="modal" data-target="#form-modal" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                        <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title">Delete Warning</h4>
+                                    </div>
+                                    <div id="form-modal-body" class="modal-body">
+                                        <p>Are you sure you want to delete ${ product.name }</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        <a href="/retail/product.delete/${ product.id }/" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+             %endfor
+            </tbody>
+        </table>
+        <table>
+            ${ form }
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+
+</%block>

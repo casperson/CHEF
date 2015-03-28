@@ -1,0 +1,48 @@
+<%inherit file="/homepage/templates/base.htm" />
+
+<%block name="content_center">
+    <div>
+        <div class="email-header">
+            <img class="col-md-3" src="${ STATIC_URL }homepage/media/ch_logo.png" alt="Colonial Heritage Foundation"/>
+            <p class="col-md-6"></p>
+            <h2 class="col-md-3 right-align">Order Confirmation</h2>
+        </div>
+        <div class="email-body">
+            <h3>Hello Daniel,</h3>
+            <p>Thank you for shopping with us. Below are the details for your purchase on 3/18/2015.</p>
+            <h3>Details</h3>
+            <p>Order #: 1996482235</p>
+        </div>
+        <table class="table table-condensed receipt-table">
+            <thead>
+                <tr>
+                    <th>Photo</th>
+                    <th>Name</th>
+##                    <th>Description</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                %for product in products:
+                <tr>
+                    <td><img style="max-width: 150px;" src="${ STATIC_URL }retail/media/${ product.name }.jpg/"
+                         alt="Picture" class="description"/>
+                    </td>
+                    <td>${product.name} </td>
+##                    <td>${product.description}</td>
+                    <td><input class="col-md-2" type="text"  value="1" disabled/></td>
+                    <td><input class="col-md-3" type="text" value="${product.price}" disabled/></td>
+                </tr>
+                %endfor
+            </tbody>
+        </table>
+        <div class="right-align receipt">
+            <p>Subtotal: $345.00</p>
+            <p>Tax (6.5%): $22.43</p>
+            <p  class="receipt">Total: $367.43</p>
+        </div>
+    </div>
+
+
+</%block>

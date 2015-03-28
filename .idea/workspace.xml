@@ -1,13 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="007a9a1c-1da8-4647-bc5d-e299c0b4b3aa" name="Default" comment="Event page updated">
+    <list default="true" id="007a9a1c-1da8-4647-bc5d-e299c0b4b3aa" name="Default" comment="Sterling's Update from Sprint2 Sprint 3 stuff">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/media/Custom Ship Replica.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/media/Custom Top Hat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/media/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/media/Top Hat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/media/Toy Sword.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/UserEditForm.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/views/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/management/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/management/commands/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/views/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/account.changepassword.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/templates/account.changepassword.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/scripts/account.changepassword.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/account.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/templates/account.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/scripts/account.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/views/account.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/base.htm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/homepage/templates/base.htm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/base.htm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/homepage/templates/base.htm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/templates/base.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/base.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/scripts/base.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/base.loginform.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/base.loginform.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/scripts/base.loginform.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/views/base.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/base2.htm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/base2.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/homepage/templates/base_ajax.htm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/base_ajax.htm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/base_ajax.htm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/templates/base_ajax.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/base_ajax.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/check_rentals.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/check_rentals.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/management/commands/check_rentals.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/index.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/index.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/index2.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/index3.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/index3.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/index3.loginform.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/index3.loginform.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/init_db.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/item.edit.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/item.edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/item.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/item.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/views/item.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/media/jquery.form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/media/jquery.loadmodal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/login.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/views/login.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/views/logout.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/order.confirmation.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/order.confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/person.edit.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/person.edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/person.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/person.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/phone.edit.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/phone.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/styles/product.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/styles/product.detail.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/product.detail.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/product.detail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/scripts/product.detail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/product.edit.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/product.edit.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/product.edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/product.edit_line_item.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/product.edit_line_item.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/product.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/product.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/product.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/scripts/product.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/views/product.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/product.search.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/styles/product.shoppingcart.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/product.shoppingcart.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/product.shoppingcart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/scripts/product.shoppingcart.jsm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/scripts/product.shoppingcart.jsm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/media/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/scripts/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/styles/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/media/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/scripts/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/styles/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/rental.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/rental.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/scripts/rental.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/rental.manage.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/rental.manage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/views/rental.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/cached_templates/templates/rental.returnitem.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/retail/templates/rental.returnitem.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/user.edit.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/user.edit.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/templates/user.edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/scripts/user.edit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/cached_templates/templates/user.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/user.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/templates/user.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/scripts/user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/account/views/user.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/venue.edit.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/venue.edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/venue.html.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/templates/venue.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/homepage/views/venue.py" />
+      <change type="DELETED" beforePath="C:\Users\Sterling\Documents\GitHub\CHEF\homepage\templates\log_in.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/cached_templates/templates/account.html.py" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/account.html.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/styles/base.css" afterPath="$PROJECT_DIR$/homepage/styles/base.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/cached_templates/templates/base.htm.py" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/base.htm.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/templates/base.htm" afterPath="$PROJECT_DIR$/homepage/templates/base.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/cached_templates/templates/event.html.py" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/event.html.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/templates/event.html" afterPath="$PROJECT_DIR$/homepage/templates/event.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/cached_templates/templates/inventory.html.py" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/inventory.html.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/cached_templates/templates/index.html.py" afterPath="$PROJECT_DIR$/homepage/cached_templates/templates/index.html.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/templates/inventory.html" afterPath="$PROJECT_DIR$/homepage/templates/inventory.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/models.py" afterPath="$PROJECT_DIR$/homepage/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chef/settings.py" afterPath="$PROJECT_DIR$/chef/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="chef.iws" />
@@ -21,11 +143,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/chef$init_db.coverage" NAME="init_db Coverage Results" MODIFIED="1425669069211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chef" />
+    <SUITE FILE_PATH="coverage/chef$init_db__1_.coverage" NAME="init_db (1) Coverage Results" MODIFIED="1426790903881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/chef$product.coverage" NAME="product Coverage Results" MODIFIED="1426367478755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/retail/views" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -36,61 +169,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="log_in.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homepage/templates/log_in.html">
+      <file leaf-file-name="product.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/retail/templates/product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="697">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="679" max-vertical-offset="1462">
+              <caret line="70" column="59" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homepage/templates/event.html">
+      <file leaf-file-name="product.shoppingcart.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/retail/templates/product.shoppingcart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="748">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="1785">
+              <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
               <folding>
-                <element signature="e#65#99#0#HTML" expanded="true" />
-                <element signature="e#121#145#0#HTML" expanded="true" />
-                <element signature="e#231#258#0#HTML" expanded="true" />
-                <element signature="e#362#421#0#HTML" expanded="true" />
+                <marker date="1427505775594" expanded="true" signature="1669:2805" placeholder="..." />
+                <marker date="1427505775594" expanded="true" signature="1735:2764" placeholder="..." />
+                <marker date="1427505775594" expanded="true" signature="1804:2082" placeholder="..." />
+                <marker date="1427505775594" expanded="true" signature="2170:2333" placeholder="..." />
+                <marker date="1427505775594" expanded="true" signature="2402:2719" placeholder="..." />
+                <marker date="1427505775594" expanded="true" signature="4375:5521" placeholder="..." />
+                <marker date="1427505775594" expanded="true" signature="4441:5480" placeholder="..." />
+                <marker date="1427505775594" expanded="true" signature="4510:4788" placeholder="..." />
+                <marker date="1427505775594" expanded="true" signature="4876:5045" placeholder="..." />
+                <marker date="1427505775594" expanded="true" signature="5114:5435" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.htm" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homepage/scripts/base.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="629">
+              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/retail/views/product.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2839" max-vertical-offset="4607">
+              <caret line="167" column="51" selection-start-line="167" selection-start-column="51" selection-end-line="167" selection-end-column="51" />
+              <folding>
+                <element signature="e#24#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.htm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homepage/templates/base.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385" vertical-offset="153" max-vertical-offset="1547">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.6824743" vertical-offset="0" max-vertical-offset="1649">
+              <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inventory.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/homepage/templates/inventory.html">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homepage/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.752907" vertical-offset="1594" max-vertical-offset="2125">
-              <caret line="109" column="34" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
-              <folding>
-                <element signature="e#84#118#0#HTML" expanded="true" />
-                <element signature="e#167#198#0#HTML" expanded="true" />
-                <element signature="e#416#449#0#HTML" expanded="true" />
-                <element signature="e#572#631#0#HTML" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="1604" max-vertical-offset="4998">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homepage/styles/base.css">
+      <file leaf-file-name="product.shoppingcart.jsm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/retail/scripts/product.shoppingcart.jsm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="867">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="578">
+              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rental.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/retail/templates/rental.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="816">
+              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -99,19 +265,62 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chef/urls.py" />
+        <option value="$PROJECT_DIR$/homepage/templates/venue.html" />
+        <option value="$PROJECT_DIR$/account/templates/user.changepassword.html" />
+        <option value="$PROJECT_DIR$/account/scripts/account.changepassword.js" />
         <option value="$PROJECT_DIR$/chef/settings.py" />
-        <option value="$PROJECT_DIR$/homepage/styles/base.css" />
-        <option value="$PROJECT_DIR$/homepage/templates/index.html" />
-        <option value="$PROJECT_DIR$/homepage/templates/event.html" />
+        <option value="$PROJECT_DIR$/product/templates/product.html" />
+        <option value="$PROJECT_DIR$/product/templates/product.detail.html" />
+        <option value="$PROJECT_DIR$/product/views/product.py" />
+        <option value="$PROJECT_DIR$/account/templates/account.changepassword.html" />
+        <option value="$PROJECT_DIR$/retail/product.shoppingcart.js" />
+        <option value="$PROJECT_DIR$/retail/product.shoppingcart.html" />
+        <option value="$PROJECT_DIR$/account/scripts/account.js" />
+        <option value="$PROJECT_DIR$/account/scripts/user.js" />
+        <option value="$PROJECT_DIR$/account/scripts/user.edit.js" />
+        <option value="$PROJECT_DIR$/account/templates/user.html" />
+        <option value="$PROJECT_DIR$/retail/styles/product.detail.css" />
+        <option value="$PROJECT_DIR$/retail/templates/product.search.html" />
+        <option value="$PROJECT_DIR$/retail/templates/product.detail.html" />
+        <option value="$PROJECT_DIR$/retail/scripts/product.js" />
+        <option value="$PROJECT_DIR$/retail/styles/product.shoppingcart.css" />
+        <option value="$PROJECT_DIR$/homepage/views/base.py" />
+        <option value="$PROJECT_DIR$/homepage/views/item.py" />
+        <option value="$PROJECT_DIR$/homepage/views/logout.py" />
+        <option value="$PROJECT_DIR$/homepage/views/person.py" />
+        <option value="$PROJECT_DIR$/retail/templates/product.edit.html" />
+        <option value="$PROJECT_DIR$/retail/templates/product.edit_line_item.html" />
+        <option value="$PROJECT_DIR$/retail/scripts/product.detail.js" />
+        <option value="$PROJECT_DIR$/init_db.py" />
+        <option value="$PROJECT_DIR$/homepage/models.py" />
+        <option value="$PROJECT_DIR$/account/templates/account.html" />
+        <option value="$PROJECT_DIR$/retail/templates/rental.return.html" />
+        <option value="$PROJECT_DIR$/retail/templates/rental.returnitem.html" />
+        <option value="$PROJECT_DIR$/retail/views/rental.py" />
+        <option value="$PROJECT_DIR$/retail/templates/rental.manage.html" />
+        <option value="$PROJECT_DIR$/homepage/templates/login.html" />
+        <option value="$PROJECT_DIR$/homepage/templates/base.loginform.html" />
         <option value="$PROJECT_DIR$/homepage/templates/base.htm" />
-        <option value="$PROJECT_DIR$/homepage/templates/inventory.html" />
+        <option value="$PROJECT_DIR$/retail/management/commands/check_rentals.py" />
+        <option value="$PROJECT_DIR$/retail/templates/check_rentals.html" />
+        <option value="$PROJECT_DIR$/retail/templates/order.confirmation.html" />
+        <option value="$PROJECT_DIR$/homepage/styles/base.css" />
+        <option value="$PROJECT_DIR$/account/views/user.py" />
+        <option value="$PROJECT_DIR$/account/templates/user.edit.html" />
+        <option value="$PROJECT_DIR$/retail/templates/rental.html" />
+        <option value="$PROJECT_DIR$/retail/scripts/rental.js" />
+        <option value="$PROJECT_DIR$/retail/styles/product.css" />
+        <option value="$PROJECT_DIR$/account/views/account.py" />
+        <option value="$PROJECT_DIR$/retail/templates/product.html" />
+        <option value="$PROJECT_DIR$/retail/views/product.py" />
+        <option value="$PROJECT_DIR$/homepage/scripts/base.js" />
+        <option value="$PROJECT_DIR$/retail/scripts/product.shoppingcart.js" />
+        <option value="$PROJECT_DIR$/retail/templates/product.shoppingcart.html" />
       </list>
     </option>
   </component>
@@ -121,8 +330,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1552" />
+    <option name="height" value="880" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -165,38 +374,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chef" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CHEF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="homepage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chef" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CHEF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="homepage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -206,10 +383,27 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="FullScreen" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="197" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="197" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="197" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="871" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="197" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="196" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="197" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="872" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -219,129 +413,85 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Braden\chef\homepage\templates" />
-      <recent name="C:\Users\Braden\chef\homepage\scripts" />
-      <recent name="C:\Users\Braden\chef\homepage\media" />
-      <recent name="C:\Users\Braden\chef\homepage\styles" />
+      <recent name="C:\Users\Sterling\Documents\GitHub\CHEF\account\scripts" />
+      <recent name="C:\Users\Sterling\Documents\GitHub\CHEF\account\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sterling\Documents\GitHub\CHEF\retail\scripts" />
+      <recent name="C:\Users\Sterling\Documents\GitHub\CHEF\retail\templates" />
+      <recent name="C:\Users\Sterling\Documents\GitHub\CHEF\product\views" />
+      <recent name="C:\Users\Sterling\Documents\GitHub\CHEF\product\templates" />
+      <recent name="C:\Users\Sterling\Documents\GitHub\CHEF\account\views" />
     </key>
   </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="Moments ago" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/homepage/styles/base.css</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/homepage/templates/base.htm</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/homepage/templates/inventory.html</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/homepage/templates/newaccount.html</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/homepage/templates/account.html</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with tree conflicts" />
-          <option name="myStatusName" value="Merged with tree conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with property conflicts" />
-          <option name="myStatusName" value="Will be merged with property conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Switched" />
-          <option name="myStatusName" value="Switched" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SWITCHED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
-  </component>
-  <component name="RunManager" selected="Django server.chef">
+  <component name="RunManager" selected="JavaScript Debug.rental.manage.html">
+    <configuration default="false" name="init_db" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chef" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="chef" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Sterling\Documents\GitHub\CHEF\init_db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="init_db (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="chef" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/init_db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonCover" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonCover" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="product" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/retail/views" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="chef" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/retail/views/product.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="rental.manage.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="file://$PROJECT_DIR$/retail/templates/rental.manage.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -575,13 +725,27 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Django server.chef" />
+      <item index="1" class="java.lang.String" itemvalue="Python.init_db" />
+      <item index="2" class="java.lang.String" itemvalue="Python.init_db (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.product" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.rental.manage.html" />
     </list>
+    <recent_temporary>
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.rental.manage.html" />
+        <item index="1" class="java.lang.String" itemvalue="Python.init_db (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.product" />
+        <item index="3" class="java.lang.String" itemvalue="Python.init_db" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -594,25 +758,31 @@
       <option name="number" value="Default" />
       <updated>1421795120788</updated>
     </task>
-    <task id="LOCAL-00001" summary="Inventory page first commit">
-      <created>1422144477866</created>
+    <task id="LOCAL-00001" summary="models.py file">
+      <created>1422150729186</created>
       <option name="number" value="00001" />
       <option name="project" value="LOCAL" />
-      <updated>1422144477866</updated>
+      <updated>1422150729186</updated>
     </task>
-    <task id="LOCAL-00002" summary="Inventory page first commit">
-      <created>1422144632701</created>
+    <task id="LOCAL-00002" summary="models.py file">
+      <created>1422153218887</created>
       <option name="number" value="00002" />
       <option name="project" value="LOCAL" />
-      <updated>1422144632701</updated>
+      <updated>1422153218887</updated>
     </task>
-    <task id="LOCAL-00003" summary="Event page updated">
-      <created>1422148445666</created>
+    <task id="LOCAL-00003" summary="models.py file">
+      <created>1422154032104</created>
       <option name="number" value="00003" />
       <option name="project" value="LOCAL" />
-      <updated>1422148445666</updated>
+      <updated>1422154032104</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="models.py file">
+      <created>1422161435812</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1422161435812</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -636,53 +806,53 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1552" height="880" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41993463" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21715818" sideWeight="0.4990619" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27673796" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41993463" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14674735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2620321" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16353887" sideWeight="0.50093806" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2593583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275401" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41993463" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27673796" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41993463" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14674735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2593583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31417114" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20911528" sideWeight="0.4990619" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16353887" sideWeight="0.50093806" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275401" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -700,249 +870,401 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Inventory page first commit" />
-    <MESSAGE value="Event page updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Event page updated" />
+    <MESSAGE value="models.py file" />
+    <option name="LAST_COMMIT_MESSAGE" value="models.py file" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="8" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chef/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="2635">
-          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/templates/base.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1496">
-          <caret line="59" column="46" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/homepage/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="238">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="461">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/homepage/templates/inventory.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+        <state vertical-scroll-proportion="0.35172415" vertical-offset="0" max-vertical-offset="1887">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/templates/item.edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="474">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#84#118#0#HTML" expanded="true" />
-            <element signature="e#167#198#0#HTML" expanded="true" />
-            <element signature="e#416#449#0#HTML" expanded="true" />
-            <element signature="e#572#631#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/styles/base.css">
+    <entry file="file://$PROJECT_DIR$/homepage/templates/item.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="833">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding />
+        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="1122">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chef/urls.py">
+    <entry file="file://$PROJECT_DIR$/homepage/templates/person.edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="306">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chef/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="2635">
-          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="474">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/__init__.py">
+    <entry file="file://$PROJECT_DIR$/retail/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="474">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/templates/product.search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2896552" vertical-offset="0" max-vertical-offset="1071">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/views/venue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9503106" vertical-offset="459" max-vertical-offset="1564">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/templates/base.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="861" max-vertical-offset="1462">
-          <caret line="73" column="75" selection-start-line="73" selection-start-column="75" selection-end-line="73" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/homepage/scripts/base.loginform.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/templates/product.edit_line_item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18599562" vertical-offset="0" max-vertical-offset="457">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/templates/product.edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="459">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4836" max-vertical-offset="6834">
+          <caret line="303" column="33" selection-start-line="303" selection-start-column="33" selection-end-line="303" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/site-packages/django/db/models/options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7528517" vertical-offset="2987" max-vertical-offset="10608">
+          <caret line="215" column="32" selection-start-line="215" selection-start-column="31" selection-end-line="215" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/templates/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1445">
+          <caret line="77" column="12" selection-start-line="60" selection-start-column="4" selection-end-line="77" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/templates/rental.returnitem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="485">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/views/logout.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/views/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/views/item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49072164" vertical-offset="0" max-vertical-offset="1513">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/views/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.385567" vertical-offset="102" max-vertical-offset="901">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/management/commands/check_rentals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6659794" vertical-offset="0" max-vertical-offset="493">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/templates/check_rentals.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14814815" vertical-offset="0" max-vertical-offset="1547">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/templates/base.loginform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25925925" vertical-offset="0" max-vertical-offset="459">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/templates/order.confirmation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1481482" vertical-offset="0" max-vertical-offset="901">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/templates/venue.edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/templates/venue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.21973094" vertical-offset="98" max-vertical-offset="1003">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/templates/newaccount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.8888888" vertical-offset="0" max-vertical-offset="2108">
+          <caret line="105" column="12" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/homepage/styles/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="833">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding />
+        <state vertical-scroll-proportion="0.24536082" vertical-offset="0" max-vertical-offset="1615">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chef/urls.py">
+    <entry file="file://$PROJECT_DIR$/account/templates/user.edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="306">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.18518518" vertical-offset="0" max-vertical-offset="459">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chef/settings.py">
+    <entry file="file://$PROJECT_DIR$/account/templates/account.changepassword.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="2635">
-          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="485">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/templates/base.htm">
+    <entry file="file://$PROJECT_DIR$/retail/styles/product.detail.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1428">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/styles/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="483">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chef/urls.py">
+    <entry file="file://$PROJECT_DIR$/retail/styles/product.shoppingcart.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="306">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chef/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="2635">
-          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="596">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="483">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chef/urls.py">
+    <entry file="file://$PROJECT_DIR$/retail/views/rental.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36823106" vertical-offset="0" max-vertical-offset="554">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/styles/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="867">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.051829267" vertical-offset="0" max-vertical-offset="328">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/templates/log_in.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/templates/event.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="748">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="1037">
+          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
           <folding>
-            <element signature="e#65#99#0#HTML" expanded="true" />
-            <element signature="e#121#145#0#HTML" expanded="true" />
-            <element signature="e#231#258#0#HTML" expanded="true" />
-            <element signature="e#362#421#0#HTML" expanded="true" />
+            <element signature="e#24#56#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/views/account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="958" max-vertical-offset="1445">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/templates/product.detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3169643" vertical-offset="181" max-vertical-offset="629">
+          <caret line="19" column="110" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/templates/person.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.796875" vertical-offset="357" max-vertical-offset="935">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/views/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1861" max-vertical-offset="2652">
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/styles/product.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41889116" vertical-offset="0" max-vertical-offset="487">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/templates/rental.manage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3794643" vertical-offset="1020" max-vertical-offset="1649">
+          <caret line="70" column="57" selection-start-line="70" selection-start-column="57" selection-end-line="70" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/account/templates/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24107143" vertical-offset="606" max-vertical-offset="1156">
+          <caret line="42" column="59" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/scripts/product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/scripts/rental.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42175573" vertical-offset="0" max-vertical-offset="524">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/scripts/product.detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22709924" vertical-offset="0" max-vertical-offset="524">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/templates/rental.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="816">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/templates/base.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4437751" vertical-offset="0" max-vertical-offset="680">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/scripts/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/templates/product.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="679" max-vertical-offset="1462">
+          <caret line="70" column="59" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/templates/product.shoppingcart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="1785">
+          <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
+          <folding>
+            <marker date="1427505775594" expanded="true" signature="1669:2805" placeholder="..." />
+            <marker date="1427505775594" expanded="true" signature="1735:2764" placeholder="..." />
+            <marker date="1427505775594" expanded="true" signature="1804:2082" placeholder="..." />
+            <marker date="1427505775594" expanded="true" signature="2170:2333" placeholder="..." />
+            <marker date="1427505775594" expanded="true" signature="2402:2719" placeholder="..." />
+            <marker date="1427505775594" expanded="true" signature="4375:5521" placeholder="..." />
+            <marker date="1427505775594" expanded="true" signature="4441:5480" placeholder="..." />
+            <marker date="1427505775594" expanded="true" signature="4510:4788" placeholder="..." />
+            <marker date="1427505775594" expanded="true" signature="4876:5045" placeholder="..." />
+            <marker date="1427505775594" expanded="true" signature="5114:5435" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/scripts/product.shoppingcart.jsm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1604" max-vertical-offset="4998">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/retail/views/product.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2635" max-vertical-offset="4607">
+          <caret line="167" column="51" selection-start-line="167" selection-start-column="51" selection-end-line="167" selection-end-column="51" />
+          <folding>
+            <element signature="e#24#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/homepage/templates/base.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385" vertical-offset="153" max-vertical-offset="1547">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.6824743" vertical-offset="0" max-vertical-offset="1649">
+          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homepage/templates/inventory.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.752907" vertical-offset="1594" max-vertical-offset="2125">
-          <caret line="109" column="34" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
-          <folding>
-            <element signature="e#84#118#0#HTML" expanded="true" />
-            <element signature="e#167#198#0#HTML" expanded="true" />
-            <element signature="e#416#449#0#HTML" expanded="true" />
-            <element signature="e#572#631#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

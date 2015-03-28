@@ -1,6 +1,8 @@
-__author__ = 'Sterling'
+__author__ = 'Group 2-5'
 
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+from polymorphic import PolymorphicModel
 
 
 STATES = (
@@ -55,220 +57,235 @@ STATES = (
     ('WV', 'West Virginia'),
     ('WI', 'Wisconsin'),
     ('WY', 'Wyoming'),
-)
+ )
 
 
-class LegalEntity(models.Model):
-    legal_entity_id = models.IntegerField(primary_key=True)
-    given_name = models.CharField(max_length=20, blank=False)
-    creation_date = models.DateField()
-    address1 = models.CharField(max_length=50, blank=False)
-    address2 = models.CharField(max_length=50)
-    city = models.CharField(max_length=20, blank=False)
-    state = models.CharField(max_length=2, blank=False, choices=STATES)
-    zip = models.IntegerField(max_length=12, blank=False)
-    email = models.CharField(max_length=40, blank=False)
+class User(AbstractUser):
+    # Inherited attributes:
+    # username
+    # password
+    # first name
+    # last name
+    # email
+    # last login
+    # isActive
+    # date Joined
+    security_question = models.CharField(max_length=100)
+    security_answer = models.CharField(max_length=100)
+    password_reset = models.BooleanField(default=False)
+    phone = models.CharField(max_length=15, blank=True, null=True)
 
 
-class Person(LegalEntity):
-    person_id = models.IntegerField(primary_key=True)
-    family_name = models.CharField(max_length=20, blank=False)
+class Address(models.Model):
+    address = models.CharField(max_length=100)
+    city = models.CharField(max_length=50)
+    state = models.CharField(max_length=25, choices=STATES)
+    zip = models.CharField(max_length=5)
+    type = models.CharField(max_length=30, blank=True, null=True)
+    user = models.ForeignKey(User, related_name='user')
 
 
-class Organization(LegalEntity):
-    organization_id = models.IntegerField(primary_key=True)
-    organization_type = models.CharField(max_length=20, blank=False)
+class PublicEvent(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    address = models.OneToOneField(Address)
 
 
-class Agent(Person):
-    agent_id = models.IntegerField(primary_key=True)
-    appointment_date = models.DateTimeField(auto_now=False, blank=False)
-
-
-class Participant(Person):
-    participant_id = models.IntegerField(primary_key=True)
-    biographical_sketch = models.CharField(max_length=300, blank=False)
-    contact_relationship = models.CharField(max_length=30, blank=False)
-    photo = models.CharField(max_length=100, blank=False)
-    person = models.IntegerField(Person)
-
-
-class Phone(object):
-    phone_id = models.IntegerField(primary_key=True)
-    number = models.IntegerField(max_length=12, blank=False)
-    extension = models.IntegerField(max_length=5)
-    TYPE = (
-        ('Cell', 'Cellular'),
-        ('Home', 'Home'),
-        ('Business', 'Business'),
-        ('Other', 'Other'),
-    )
-    type = models.CharField(max_length=20, blank=False)
-    legal_entity_id = models.ForeignKey(LegalEntity)
+class Category(models.Model):
+    description = models.CharField(max_length=300)
 
 
 class Item(models.Model):
-    item_id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=20, blank=False)
-    description = models.CharField(max_length=20)
-    value = models.DecimalField(max_digits=8, decimal_places=2, blank=False)
-    standard_rental_price = models.DecimalField(max_digits=8, decimal_places=2, blank=False)
-    legal_entity_id = models.ForeignKey(LegalEntity)
+    name = models.CharField(max_length=100)
+    item_source = models.CharField(max_length=50)
+    description = models.CharField(max_length=300, blank=True, null=True)
+    notes = models.CharField(max_length=500, blank=True, null=True)
+    category = models.ForeignKey(Category)
+
+    def __str__(self):
+        return '{} {} {}'.format(self.name, self.description, self.item_source)
 
 
-class Product(models.Model):
-    product_id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=50, blank=False)
-    description = models.CharField(max_length=200)
-    category = models.CharField(max_length=30, blank=False)
-    current_price = models.DecimalField(decimal_places=2, max_digits=8, blank=False)
-    legal_entity_id = models.ForeignKey(LegalEntity)
+class Photograph(models.Model):
+    date_taken = models.DateField(auto_now=False)
+    place_taken = models.CharField(max_length=50, blank=True, null=True)
+    description = models.CharField(max_length=200, blank=True, null=True)
+    image = models.CharField(max_length=100)
+    item = models.ForeignKey(Item)
 
 
-class Picture(models.Model):
-    picture_id = models.IntegerField(primary_key=True)
-    picture = models.CharField(max_length=100, blank=False)
-    caption = models.CharField(max_length=75)
-    item_id = models.ForeignKey(Item)
-    product_id = models.ForeignKey(Product)
+class Organization(User):
+    organization_name = models.CharField(max_length=100)
+    organization_type = models.CharField(max_length=50, blank=True, null=True)
 
 
-class WardrobeItem(Item):
-    wardrobe_item_id = models.IntegerField(primary_key=True)
-    size = models.CharField(max_length=8, blank=False)
-    size_modifier = models.CharField(max_length=20)
+class Volunteer(User):
+    biographical_sketch = models.CharField(max_length=500, blank=True, null=True)
+    # contact_relationship = models.ForeignKey('self')
+
+
+class Event(models.Model):
+    start_date = models.DateField()
+    end_date = models.DateField()
+    map_filename = models.CharField(max_length=100, blank=True, null=True)
+    public_event = models.ForeignKey(PublicEvent, null=True, blank=True)
+
+    def __str__(self):
+        return '{} {} {}'.format(self.start_date, self.map_filename, self.public_event)
+
+
+class Area(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=500, blank=True, null=True)
+    place_number = models.IntegerField(max_length=3)
+    coordinator = models.ForeignKey(Volunteer, related_name="Area_coordinator")
+    supervisor = models.ForeignKey(Volunteer, related_name="Area_supervisor")
+    event = models.ForeignKey(Event)
+
+    def __str__(self):
+        return '{} {} {}'.format(self.name, self.description, self.place_number)
+
+
+class Transaction(models.Model):
+    date = models.DateField()
+    total_cost = models.DecimalField(max_digits=8, decimal_places=2)
+    date_packed = models.DateField(null=True, blank=True)
+    date_paid = models.DateField(null=True, blank=True)
+    date_shipped = models.DateField(null=True, blank=True)
+    shipped_by = models.ForeignKey(Volunteer, related_name="transaction_shipped_by", null=True, blank=True)
+    tracking_number = models.CharField(max_length=50, blank=True, null=True)
+    user = models.ForeignKey(User, )
+    volunteer = models.ForeignKey(Volunteer, null=True, blank=True, related_name="transaction_volunteer")
+
+    def __str__(self):
+        return '{} {} {}'.format(self.payment_handler, self.user, self.volunteer)
+
+
+class Payment(models.Model):
+    type = models.CharField(max_length=50)
+    date = models.DateField(auto_now=True)
+    amount_paid = models.DecimalField(max_digits=8, decimal_places=2)
+    Transaction = models.ManyToManyField(Transaction, null=True, blank=True, related_name="payment")
+
+
+class ShoppingCart(models.Model):
+    user = models.OneToOneField(User, primary_key=True)
+
+
+class NonSaleItem(Item):
+    value = models.DecimalField(max_digits=8, decimal_places=2)
+
+
+class RentableItem(NonSaleItem):
+    times_rented = models.IntegerField(default=0)
+    rental_price = models.DecimalField(max_digits=6, decimal_places=2)
+    price_per_day = models.DecimalField(max_digits=4, decimal_places=2)
+    replacement_price = models.DecimalField(max_digits=8, decimal_places=2)
+
+    def __str__(self):
+        return '{} {} {}'.format(self.name, self.price_per_day, self.rental_price)
+
+
+class WardrobeItem(RentableItem):
+    size = models.CharField(max_length=8)
+    size_modifier = models.CharField(max_length=20, blank=True, null=True)
     GENDER = (
         ('M', 'Men'),
         ('W', 'Women'),
         ('U', 'Unisex'),
     )
-    gender = models.CharField(max_length=1, blank=False, choices=GENDER)
-    color = models.CharField(max_length=20, blank=False)
-    pattern = models.CharField(max_length=20)
-    start_year = models.IntegerField(max_length=4, blank=False)
-    end_year = models.IntegerField(max_length=4, blank=False)
-    note = models.CharField(max_length=300)
+    gender = models.CharField(max_length=1, choices=GENDER)
+    color = models.CharField(max_length=20)
+    pattern = models.CharField(max_length=20, null=True, blank=True)
+    start_year = models.DateField(max_length=4, blank=True, null=True)
+    end_year = models.DateField(max_length=4, blank=True, null=True)
 
 
-class Return(object):
-    return_id = models.IntegerField(primary_key=True)
-    return_time = models.DateTimeField(blank=False)
-    fees_paid = models.DecimalField(max_digits=8, decimal_places=2)
-    agent_id = models.ForeignKey(Agent)
+class RentalLineItem(models.Model):
+    date_out = models.DateField()
+    date_due = models.DateField()
+    discount_percent = models.IntegerField(null=True, blank=True)
+    rentable_item = models.ForeignKey(RentableItem, null=True, blank=True, related_name="rentable_item")
+    wardrobe_item = models.ForeignKey(WardrobeItem, null=True, blank=True, related_name="wardrobe_item")
 
 
-class RentedItem(object):
-    rented_item_id = models.IntegerField(primary_key=True)
-    CONDITION = (
-        ('Poor', 'Poor'),
-        ('OK', 'OK'),
-        ('Good', 'Good'),
-        ('Like-New', 'Like-New'),
-    )
-    condition = models.CharField(max_length=20, blank=False, choices=CONDITION)
-    new_damage = models.CharField(max_length=20)
-    damage_fee = models.DecimalField(max_digits=8, decimal_places=2)
-    late_fee = models.DecimalField(max_digits=8, decimal_places=2)
-    return_id = models.IntegerField(Return)
+class ReturnLineItem(models.Model):
+    date_in = models.DateTimeField()
+    damage_fee = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
+    damage_note = models.CharField(max_length=200, blank=True, null=True)
+    days_late = models.IntegerField()
+    late_fee = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
+    rental_line_item = models.ForeignKey(RentalLineItem)
 
 
-class Rental(object):
-    rental_id = models.IntegerField(primary_key=True)
-    rental_time = models.DateTimeField(auto_now=False, blank=False)
-    due_date = models.DateField(auto_now=False, blank=False)
-    discount_percent = models.DecimalField(max_digits=3, decimal_places=2)
-    organization_id = models.IntegerField(Organization)
-    person_id = models.ForeignKey(Person)
-    agent_id = models.ForeignKey(Agent)
-    items = models.ManyToManyField(Item)
+class Product(Item):
+    price = models.DecimalField(max_digits=8, decimal_places=2)
+    qty_on_hand = models.IntegerField()
+    date_made = models.DateField()
+    area = models.ForeignKey(Area, null=True, blank=True)
+
+    def __str__(self):
+        return '{} {} {}'.format(self.id, self.name, self.price)
 
 
-class BulkProduct(Product):
-    bulk_product_id = models.IntegerField(primary_key=True)
-    quantity_on_hand = models.IntegerField(max_length=8)
+class PersonalizedProduct(Product):
+    production_time = models.TimeField()
+    order_form = models.CharField(max_length=250)
+    volunteer = models.ForeignKey(Volunteer)
 
 
-class PersonalProduct(Product):
-    personal_product_id = models.IntegerField(primary_key=True)
-    order_form_name = models.CharField(max_length=30)
-    production_time = models.TimeField(auto_now=False)
-    order_file = models.CharField(max_length=100)
+class LineItem(models.Model):
+    amount = models.DecimalField(max_digits=8, decimal_places=2)
+    quantity = models.IntegerField(max_length=6)
+    # A save for later feature would be a cool add on, but for now we will hold off on it.
+    # save_for_later = models.BooleanField(default=False)
+    transaction = models.ForeignKey(Transaction, null=True, blank=True)
+    shopping_cart = models.ForeignKey(ShoppingCart, null=True, blank=True)
+
+    # Changed the OneToOne fields to Foreign key fields
+    product = models.ForeignKey(Product, null=True, blank=True, related_name='LineItem_Product')
+    personalized_product = models.ForeignKey(PersonalizedProduct, null=True,
+                                                blank=True, related_name='PersonalizedProduct'),
+    rental_line_item = models.ForeignKey(RentalLineItem, null=True, blank=True, related_name='RentalLineItem')
+    return_line_item = models.ForeignKey(ReturnLineItem, null=True, blank=True, related_name='ReturnLineItem')
+
+    def product_id(self):
+        product = self.product
+        id = product.id
+        return id
+
+    def product_name(self):
+        product = self.product
+        name = product.name
+        return name
+
+    def product_price(self):
+        product = self.product
+        price = product.price
+        return price
+
+    def rental_item_name(self):
+        rentalitem = self.rental_line_item
+        name = rentalitem.rentable_item.name
+        return name
+
+    def rental_item_price(self):
+        rentalitem = self.rental_line_item
+        price = rentalitem.rentable_item.rental_price
+        return price
 
 
-class DjangoUser(object):
-    user_id = models.IntegerField(primary_key=True)
-    first_name = models.CharField(max_length=15, blank=False)
-    last_name = models.CharField(max_length=20, blank=False)
-    email = models.CharField(max_length=30, blank=False)
-    password = models.CharField(max_length=20, blank=False)
-    address = models.CharField(max_length=50, blank=False)
-    city = models.CharField(max_length=30, blank=False)
-    state = models.CharField(max_length=2, choices=STATES)
-    zip = models.IntegerField(max_length=10, blank=False)
-    country = models.CharField(max_length=40, blank=False)
-    security_question = models.CharField(max_length=100, blank=False)
-    security_answer = models.CharField(max_length=20, blank=False)
-    role = models.CharField(max_length=20, blank=False)
-    record_creation_date = models.DateTimeField(auto_now=False)
-    phone_number = models.CharField(max_length=12, blank=False)
-    person_id = models.OneToOneField(Person)
+class HistoricalFigure(models.Model):
+    name = models.CharField(max_length=100)
+    birth_date = models.DateField()
+    birth_place = models.CharField(max_length=100)
+    death_place = models.CharField(max_length=100)
+    biographical_note = models.CharField(max_length=1000)
+    is_fictional = models.BooleanField(default=False)
 
 
-class Order(models.Model):
-    order_id = models.IntegerField(primary_key=True)
-    order_date = models.DateTimeField(auto_now=False, blank=False)
-    date_packed = models.DateTimeField(auto_now=False)
-    date_paid = models.DateTimeField(auto_now=False)
-    date_shipped = models.DateTimeField(auto_now=False)
-    tracking_number = models.CharField(max_length=30)
-    packed_by = models.IntegerField(Agent)
-    processed_by = models.IntegerField(Agent)
-    shipped_by = models.IntegerField(Agent)
-    bulk_products = models.ManyToManyField(BulkProduct)
-    personal_products = models.ManyToManyField(PersonalProduct)
-    user_id = models.IntegerField(DjangoUser)
-
-
-class IndividualProduct(Product):
-    individual_product_id = models.IntegerField(primary_key=True)
-    date_made = models.DateField(auto_now=False)
-    order_id = models.ForeignKey(Order, null=True)
-
-
-class Event(object):
-    event_id = models.IntegerField(primary_key=True)
-    start_date = models.DateTimeField(auto_now=False, blank=False)
-    end_date = models.DateTimeField(auto_now=False, blank=False)
-    map_file_name = models.CharField(max_length=100)
-    name = models.CharField(max_length=20, blank=False)
-    description = models.CharField(max_length=300)
-
-
-class Area(object):
-    area_id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=30, blank=False)
-    description = models.CharField(max_length=300)
-    place_number = models.IntegerField(max_length=20, blank=False)
-    coordinator_id = models.IntegerField(Agent, blank=False)
-    supervisor_id = models.IntegerField(Agent, blank=False)
-    event_id = models.IntegerField(Event, blank=False)
-    participants = models.ManyToManyField(Participant)
-
-
-class SaleItem(object):
-    sale_item_id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=20)
-    description = models.CharField(max_length=300)
-    low_price = models.DecimalField(max_digits=8, decimal_places=2)
-    high_price = models.DecimalField(max_digits=8, decimal_places=2)
-    area_id = models.IntegerField(Area, blank=False)
-
-
-class Venue(object):
-    venue_id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=30, blank=False)
-    address = models.CharField(max_length=50, blank=False)
-    city = models.CharField(max_length=20, blank=False)
-    state = models.CharField(max_length=2, blank=False)
-    zip = models.IntegerField(max_length=10, blank=False)
-    event_id = models.IntegerField(Event)
+class VolunteerRole(models.Model):
+    volunteer_type = models.CharField(max_length=80)
+    volunteer = models.ForeignKey(Volunteer)
+    area = models.ForeignKey(Area)
+    historical_figure = models.ForeignKey(HistoricalFigure, null=True, blank=True)

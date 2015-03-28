@@ -1,0 +1,61 @@
+<%inherit file="base.htm" />
+
+<%block name="content_center">
+
+    <div>
+        <h2 style="text-decoration: underline">Inventory</h2>
+        <ul class="nav nav-tabs" style="background-color: white">
+            <li role="menu"><a href="/homepage/item/" style="font-size: medium">View Items</a></li>
+            <li role="menu"><a href="/homepage/product/" style="font-size: medium">View Products</a></li>
+        </ul>
+
+        <a href="/homepage/item.create/" class="btn btn-success">Add New Item</a>
+
+        <h3 style="text-decoration: underline">Item List</h3>
+
+        <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+            <thead>
+                <th>Item ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Value</th>
+                <th>Rental Price</th>
+                <th>Edit/Delete</th>
+            </thead>
+            <tbody>
+             %for item in items:
+                <tr>
+                    <td>${ item.id}</td>
+                    <td>${ item.name }</td>
+                    <td>${ item.description }</td>
+                    <td>${ item.value }</td>
+                    <td>${ item.standard_rental_price }</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="...">
+                        <a type="button" class="btn btn-default" href="/homepage/item.edit/${ item.id }/"><i class="fa fa-edit"></i></a>
+                        <button type="button" data-toggle="modal" data-target="#form-modal" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                        <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title">Delete Warning</h4>
+                                    </div>
+                                    <div id="form-modal-body" class="modal-body">
+                                        <p>Are you sure you want to delete ${ item.name }</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        <a href="/homepage/item.delete/${ item.id }/" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </td>
+                </tr>
+             %endfor
+            </tbody>
+        </table>
+    </div>
+</%block>

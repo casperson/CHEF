@@ -1,0 +1,32 @@
+<%inherit file="/homepage/templates/base.htm" />
+
+<%block name="content_center">
+
+    <div>
+        <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+            <thead>
+                <th>Picture</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity Available</th>
+                <th>Quantity</th>
+                <th>Add to Cart</th>
+            </thead>
+            <tbody>
+             %for product in products:
+                <tr>
+                    <div>
+                        <td> <img class="description" src="${ STATIC_URL }retail/media/${ product.name }.jpg/"></td>
+                    </div>
+                    <td>${ product.name}</td>
+                    <td>${ product.description }</td>
+                    <td>${ product.price }</td>
+                    <td>${ product.qty_on_hand }</td>
+                    <td> <input id="qty-input"/> </td>
+                    <td><button data-pid="${ product.id }" id="shopping_cart_dialog" class="btn btn-warning">Add to Cart</button></td>
+                 </tr>
+             %endfor
+        </table>
+    </div>
+</%block>

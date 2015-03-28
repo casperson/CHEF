@@ -1,0 +1,81 @@
+<%inherit file="/homepage/templates/base.htm" />
+
+<%block name="content_center">
+
+    <div>
+        <h3 style="text-decoration: underline">Product List</h3>
+
+        <div class="text-right">
+            <a href="/homepage/product.create/" class="btn btn-success">Add New Product</a>
+        <a href="/retail/product.batch/" class="btn btn-primary">See Overdue Rentals</a>
+        </div>
+
+        <form id="search" method="post" action="product.search">
+            <input/>
+            <a href="/retail/product.search/" class="btn btn-info">Search Product</a>
+        </form>
+            <ul id="product_list">
+                %for product in products:
+                <li>
+##                    <div>
+                        <img class="description product-image" src="${ STATIC_URL }retail/media/${ product.name }.jpg/">
+                        <a href="/retail/product.detail/${ product.id }/">${ product.name }</a>
+                        <p>${ product.price }</p>
+##                        <div class="btn-group"  role="group" aria-label="...">
+##                            <a href="/retail/product.edit/${ product.id }/" type="button"  class="btn btn-default"><i class="fa fa-edit"></i></a>
+##                            <a href="/retail/product.delete/${ product.id }/" type="button" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+##                        </div>
+##                    </div>
+                </li>
+                %endfor
+            </ul>
+        </div>
+</%block>
+
+
+
+##        <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+##            <tr>
+##                <th>Product ID</th>
+##                <th>Name</th>
+##                <th>Description</th>
+##                <th>Quantity On Hand</th>
+##                <th>Current Price</th>
+##                <th>Details</th>
+##                <th>Edit/Delete</th>
+##            </tr>
+##             %for product in products:
+##                <tr>
+##                    <td>${ product.id}</td>
+##                    <td>${ product.name }</td>
+##                    <td>${ product.description }</td>
+##                    <td>${ product.qty_on_hand }</td>
+##                    <td>${ product.price }</td>
+##                    <td><a href="/retail/product.detail/${ product.id }/" class="btn btn-info">Show Details</a></td>
+##                    <td>
+##                        <div class="btn-group"  role="group" aria-label="...">
+##                            <a href="/retail/product.edit/${ product.id }/" type="button"  class="btn btn-default"><i class="fa fa-edit"></i></a>
+##                            <a href="/retail/product.delete/${ product.id }/" type="button" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+####                            <button type="button" data-toggle="modal" data-target="#form-modal" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+####                            <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+####                                <div class="modal-dialog">
+####                                    <div class="modal-content">
+####                                        <div class="modal-header">
+####                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+####                                            <h4 class="modal-title">Delete Warning</h4>
+####                                        </div>
+####                                        <div id="form-modal-body" class="modal-body">
+####                                            <p>Are you sure you want to delete ${ product.name }</p>
+####                                        </div>
+####                                        <div class="modal-footer">
+####                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+####                                            <a href="/retail/product.delete/${ product.id }/" class="btn btn-danger">Delete</a>
+####                                        </div>
+####                                    </div>
+####                                </div>
+####                            </div>
+##                        </div>
+##                    </td>
+##                </tr>
+##             %endfor
+##        </table>

@@ -9,8 +9,6 @@
     <meta charset="UTF-8">
     <head>
 
-        <title>homepage</title>
-
         ## add any site-wide scripts or CSS here; for example, jquery:
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -23,8 +21,11 @@
         ## adding bootstrap
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-
+        ## Add jquery
+        <script src="${ STATIC_URL }homepage/media/jquery.loadmodal.js"></script>
+        <script src="${ STATIC_URL }homepage/media/jquery.form.js"></script>
 
 
         ## render the css with the same name as this page
@@ -41,15 +42,29 @@
                 <div class="col-xs-3" >
                     <img src="/static/homepage/media/ch_logo.png" height="75">
                 </div>
-                <div class="col-xs-4"></div>
-                <div class="col-xs-5" style="text-align: right;margin-top: 20px">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-7" style="text-align: right;margin-top: 20px">
+                    %if request.user.is_authenticated():
+                        Welcome, ${ request.user.get_full_name() }
+                        <a role="logout"><a class="btn btn-danger btn-s" href="/homepage/logout/">Log Out</a>
+                    %else:
+                        <button id="show_login_dialog" class="btn btn-success">Login</button>
+                        <button id="create_account_btn" class="btn btn-warning">Create Account</button>
+                    %endif
                     <ul class="nav nav-tabs">
                         <li role="menu"><a href="/homepage/index/">Home</a></li>
-                        <li role="log_in"><a href="/homepage/log_in/">Log In</a></li>
-                        <li role="event"><a href="/homepage/event/">Events</a></li>
-##                        <li role="menu"><a href="/homepage/index/">Home</a></li>
-##                        <li role="menu"><a href="/homepage/index/">Home</a></li>
-                        <li role="menu"><a href="/homepage/inventory/">Inventory</a></li>
+                        <li role="phone"><a href="/retail/product/">Product List</a></li>
+                        %if request.user.is_authenticated():
+                            <li role="person"><a href="/account/user/">Users</a></li>
+                            <li role="rentals"><a href="/retail/rental/">Rentable Items</a></li>
+                            <li role="venue"><a href="/venue/venue/">Venues</a></li>
+                            <li role="menu"><a href="/homepage/item/">Inventory</a></li>
+                            <li><a href="/../account/account/">My Account</a></li>
+                            <li><button class="btn btn-warning" id="shopping_cart_dialog2"><i class="fa fa-shopping-cart"></i> Shopping Cart</button></li>
+                            <br/>
+                        %else:
+##                           some other stuff we want to show?
+                        %endif
                     </ul>
                 </div>
             </div>
@@ -58,23 +73,16 @@
 
         <div class="container-fluid base-body">
             <div class="col-xs-1" style="background-color: navy; height: 1000px">
-##                <%block name="content_left">
-##                    <div>
-##                        <ul class="nav nav-pills nav-stacked">
-##                            <li role="menu"><a href="/homepage/index/">Home</a></li>
-##                            <li role="menu"><a href="/homepage/about/">About</a></li>
-##                            <li role="menu"><a href="/homepage/contact/">Contact</a></li>
-##                            <li role="menu"><a href="/homepage/terms/">Terms of Service <span class="badge">Updated</span></a></li>
-##                        </ul>
-##                    </div>
-##                </%block>
+
             </div>
             <div class="col-xs-10">
                 <%block name="content_center">
 
                 </%block>
             </div>
-            <div class="col-xs-1" style="background-color: navy; height: 1000px"></div>
+            <div class="col-xs-1" style="background-color: navy; height: 1000px">
+
+            </div>
         </div>
 
         ## render the JS with the same name as this page

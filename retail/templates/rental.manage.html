@@ -1,0 +1,92 @@
+<%inherit file="/homepage/templates/base.htm" />
+
+<%block name="content_center">
+
+    <div>
+        <h3 style="text-decoration: underline">Rented Items</h3>
+
+        <a href="/retail/rental.batch/" class="btn btn-primary" pull-right>See All Overdue Rentals</a>
+        <br/><br/>
+        <form id="search" method="post" action="rental.search">
+            <input type="text" placeholder=" Search"/>
+        </form>
+        <br/>
+        <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Rental Price</th>
+            <th>Price Per Day</th>
+            <th>Date Due</th>
+            <th></th>
+        </tr>
+         %for lineitem in lineitems:
+            <tr>
+                <td>${ lineitem.rental_line_item.rentable_item.name }</td>
+                <td>${ lineitem.quantity }</td>
+                <td>${ lineitem.rental_line_item.rentable_item.rental_price }</td>
+                <td>${ lineitem.rental_line_item.rentable_item.price_per_day }</td>
+                <td>${ lineitem.rental_line_item.date_due }</td>
+##                <td><a href="/retail/rental.returnitem/${ lineitem.id }" type="button" class="btn btn-success">Return Item</a></td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" data-toggle="modal" data-target="#form-modal" class="btn btn-success">Return Item</button>
+                            <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title">Return Item</h4>
+                                        </div>
+                                        <div id="form-modal-body" class="modal-body">
+                                            <h2>Rental Item Information</h2>
+                                            <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+                                                <tr style="font-size: medium">
+                                                    <th>Name</th>
+                                                    <th>Quantity</th>
+                                                    <th>Price Per Day</th>
+                                                    <th>Date Due</th>
+                                                    <th>Days Late</th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr style="font-size: medium">
+                                                    <td> Pistol </td>
+                                                    <td> 1 </td>
+                                                    <td> $3.00 </td>
+                                                    <td> 2015-04-20 </td>
+                                                    <td> 3 </td>
+                                                </tr>
+                                            </table>
+                                            <br/>
+                                            <h4>Sub Total: $9.00</h4>
+                                            <br/><h4>Condition When Rented:
+                                                <span style="color: darkgreen; font-weight: bold">Good</span>
+                                            </h4>
+                                            <h4>Condition When Returned:
+                                                <select>
+                                                    <option style="color: darkgreen" value="Good">Good</option>
+                                                    <option style="color: darkgoldenrod" value="OK">OK</option>
+                                                    <option style="color:orange;" value="Poor">Poor</option>
+                                                    <option style="color: #A41425" value="usable">Broken</option>
+                                                </select>
+                                            </h4>
+                                            <br/>
+                                            <h4 style="color: #A41425">Damage Fee:
+                                                <input type="text"/>
+                                            </h4>
+                                            <h3>Total Amount Due: $14.00</h3>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-warning">Return and Add to Transaction</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </td>
+            </tr>
+         %endfor
+         </table>
+    </div>
+</%block>

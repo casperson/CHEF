@@ -1,0 +1,68 @@
+<%inherit file="base.htm" />
+
+<%block name="content_center">
+<div>
+        <h2 style="text-decoration: underline">Events</h2>
+        <ul class="nav nav-tabs" style="background-color: white">
+            <li role="menu"><a href="/homepage/events/">Events</a></li>
+            <li role="menu"><a href="/homepage/areas/">Areas</a></li>
+
+        </ul>
+
+    <div style="margin-top: 10px" class="container-fluid">
+
+        <div style="margin-top: 10px">
+            <p>
+                <a href="/homepage/events.create/" class="btn btn-success">Add New Event</a>
+            </p>
+
+           <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+                <tr>
+                    <th>Event Name</th>
+                    <th>Description</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Edit | Delete</th>
+                </tr>
+
+                    %for event in events:
+                        <tr>
+
+                            <td>${ event.name }</td>
+                            <td>${ event.description }</td>
+                            <td>${ event.start_date }</td>
+                            <td>${ event.end_date }</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <a href="/homepage/events.edit/${ event.id }" type="button" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                                    <button type="button" data-toggle="modal" data-target="#form-modal" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                    <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                              <h4 class="modal-title">Delete Warning</h4>
+                                            </div>
+                                            <div id="form-modal-body" class="modal-body">
+                                                <p> Are you sure you want to DELETE "${ event.name }"</p>
+                                           </div>
+                                           <div class="modal-footer">
+                                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                             <a href="/homepage/events.delete/${ event.id }" class="btn btn-danger">Delete</a>
+                                           </div>
+                                         </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    %endfor
+
+
+           </table>
+
+        </div>
+
+    </div>
+</div>
+</%block>

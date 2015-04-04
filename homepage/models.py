@@ -82,13 +82,7 @@ class Address(models.Model):
     state = models.CharField(max_length=25, choices=STATES)
     zip = models.CharField(max_length=5)
     type = models.CharField(max_length=30, blank=True, null=True)
-    user = models.ForeignKey(User, related_name='user')
-
-
-class PublicEvent(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.CharField(max_length=500)
-    address = models.OneToOneField(Address)
+    user = models.ForeignKey(User, related_name='user')    
 
 
 class Category(models.Model):
@@ -128,10 +122,12 @@ class Event(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
     map_filename = models.CharField(max_length=100, blank=True, null=True)
-    public_event = models.ForeignKey(PublicEvent, null=True, blank=True)
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    address = models.OneToOneField(Address)
 
     def __str__(self):
-        return '{} {} {}'.format(self.start_date, self.map_filename, self.public_event)
+        return '{} {} {}'.format(self.start_date, self.map_filename)
 
 
 class Area(models.Model):

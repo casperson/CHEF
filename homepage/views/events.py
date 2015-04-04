@@ -104,3 +104,28 @@ def delete(request):
     event.delete()
 
     return HttpResponseRedirect('/homepage/events/')
+
+
+@view_function
+##@permission_required('admin.manager_rights', '/homepage/login/')
+
+def details(request):
+
+    params = {}
+
+    try:
+        areas = hmod.Area.objects.all().filter(event=request.urlparams[0])
+        event = hmod.Event.objects.get(id=request.urlparams[0])
+        products = hmod.Product.objects.all()
+      #  supername = hmod.Area.supername(request.urlparams[0])
+
+    except hmod.Area.DoesNotExist:
+        return HttpResponseRedirect('/homepage/events')
+
+    params['areas'] = areas
+    params['event'] = event
+    params['products'] = products
+
+   # params['supername'] = supername
+
+    return templater.render_to_response(request, 'events.detail.html', params)

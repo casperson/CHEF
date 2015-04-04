@@ -1,0 +1,14 @@
+#product_list{
+    list-style: none;
+}
+
+li{
+    display: inline;
+}
+
+.product-image{
+    max-width: 150px;
+}
+p{
+    display: inline;
+}

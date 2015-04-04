@@ -138,8 +138,14 @@ class Area(models.Model):
     supervisor = models.ForeignKey(Volunteer, related_name="Area_supervisor")
     event = models.ForeignKey(Event)
 
-    def __str__(self):
-        return '{} {} {}'.format(self.name, self.description, self.place_number)
+    # def __str__(self):
+    #     return '{} {} {}'.format(self.name, self.description, self.place_number)
+
+    # def supername(self):
+    #     super = Area.supervisor
+    #
+    #     name = vol.first_name + " " + vol.last_name
+    #     return name
 
 
 class Transaction(models.Model):

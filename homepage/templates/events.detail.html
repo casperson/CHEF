@@ -1,0 +1,54 @@
+<%inherit file="/homepage/templates/base.htm" />
+
+<%block name="content_center">
+
+
+    <div>
+        <p> <h2>${ event.name } </h2></p>
+        <p> Dates: ${ event.start_date} - ${ event.end_date}  </p>
+        <p> Description: ${ event.description} </p>
+    </div>
+
+        <p><h4>Events</h4></p>
+            <div>
+                <table class="table table-bordered">
+                    <thead>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Location</th>
+                        <th>Supervisor</th>
+                    </thead>
+
+                    %for area in areas:
+                        <tr>
+                            <td>${ area.name}</td>
+                            <td>${ area.description }</td>
+                            <td>${ area.place_number }</td>
+                            <td>${ area.supervisor }</td>
+                        </tr>
+                     %endfor
+                </table>
+            </div>
+    <p><h4>Products Available</h4></p>
+           <div>
+                <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+                    <thead>
+                        <th>Picture</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </thead>
+                    <tbody>
+                     %for product in products:
+                        <tr>
+                            <div>
+                                <td> <img class="description" src="${ STATIC_URL }retail/media/${ product.name }.jpg/"></td>
+                            </div>
+                            <td>${ product.name}</td>
+                            <td>${ product.description }</td>
+                            <td>${ product.price }</td>
+                         </tr>
+                     %endfor
+                </table>
+            </div>
+</%block>

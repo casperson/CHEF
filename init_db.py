@@ -23,48 +23,48 @@ subprocess.call([sys.executable, "manage.py", "migrate"])
 
 # ######### CREATE PERMISSIONS/GROUPS #####################
 
-# Permission.objects.all().delete()
-# Group.objects.all().delete()
-#
-# permission1 = Permission()
-# permission1.codename = 'admin_rights'
-# permission1.content_type = ContentType.objects.get(id=28)
-# permission1.name = 'Has Admin Rights'
-# permission1.save()
-#
-# permission2 = Permission()
-# permission2.codename = 'manager_rights'
-# permission2.content_type = ContentType.objects.get(id=28)
-# permission2.name = 'Has Manager Rights'
-# permission2.save()
-#
-# permission3 = Permission()
-# permission3.codename = 'guest_rights'
-# permission3.content_type = ContentType.objects.get(id=28)
-# permission3.name = 'Has Guest Rights'
-# permission3.save()
-#
-# group = Group()
-# group.name = "Admins"
-# group.save()
-# group.permissions.add(permission1)
-#
-# group2 = Group()
-# group2.name = "Managers"
-# group2.save()
-# group2.permissions.add(permission2)
-#
-# group3 = Group()
-# group3.name = "Guests"
-# group3.save()
-# group3.permissions.add(permission3)
+Permission.objects.all().delete()
+Group.objects.all().delete()
+
+permission1 = Permission()
+permission1.codename = 'admin_rights'
+permission1.content_type = ContentType.objects.get(id=27)
+permission1.name = 'Has Admin Rights'
+permission1.save()
+
+permission2 = Permission()
+permission2.codename = 'manager_rights'
+permission2.content_type = ContentType.objects.get(id=27)
+permission2.name = 'Has Manager Rights'
+permission2.save()
+
+permission3 = Permission()
+permission3.codename = 'guest_rights'
+permission3.content_type = ContentType.objects.get(id=27)
+permission3.name = 'Has Guest Rights'
+permission3.save()
+
+group = Group()
+group.name = "Admins"
+group.save()
+group.permissions.add(permission1)
+
+group2 = Group()
+group2.name = "Managers"
+group2.save()
+group2.permissions.add(permission2)
+
+group3 = Group()
+group3.name = "Guests"
+group3.save()
+group3.permissions.add(permission3)
 
 # ###### create all the tables (python manage.py migrate) ###########
 
 for data in [
     ["sTracy", 'Sterling', 'Tracy', 'Ster_tracy@gmail.com', 'whodis',
      'What is your favorite animal', 'Dog', False, '480-999-5555'],
-    ["DanTheMan", 'Daniel', 'Friebe', 'D_Man@gmail.com', 'whodis',
+    ["DanTheMan", 'Daniel', 'Friebe', 'danielfriebe11@gmail.com', 'whodis',
      'What is your favorite animal', 'Dog', False, '461-999-5555'],
 ]:
     u = hmod.User()
@@ -235,7 +235,7 @@ for data in [
     ns.save()
 
 for data in [
-    ["Top Hat", "Bulk Product: comes in Small, Medium, Large", "Hat Suiter", hmod.Category.objects.get(id=2),
+    ["Top Hat", "comes in Small, Medium, Large", "Hat Suiter", hmod.Category.objects.get(id=2),
      20.00, 50, "2014-01-02"],
     ["Toy Sword", "For the kiddies", "Toys-R-Us", hmod.Category.objects.get(id=4), 10.00, 100, "2014-03-04"],
 ]:

@@ -276,6 +276,11 @@ class LineItem(models.Model):
         price = rentalitem.rentable_item.rental_price
         return price
 
+    def rental_item_description(self):
+        rentalitem = self.rental_line_item
+        description = rentalitem.rentable_item.description
+        return description
+
 
 class HistoricalFigure(models.Model):
     name = models.CharField(max_length=100)

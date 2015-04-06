@@ -62,7 +62,7 @@ group3.permissions.add(permission3)
 # ###### create all the tables (python manage.py migrate) ###########
 
 for data in [
-    ["sTracy", 'Sterling', 'Tracy', 'Ster_tracy@gmail.com', 'whodis',
+    ["sTracy", 'Sterling', 'Tracy', 'sterling.tracy.4@gmail.com', 'whodis',
      'What is your favorite animal', 'Dog', False, '480-999-5555'],
     ["DanTheMan", 'Daniel', 'Friebe', 'danielfriebe11@gmail.com', 'whodis',
      'What is your favorite animal', 'Dog', False, '461-999-5555'],

@@ -138,14 +138,8 @@ class Area(models.Model):
     supervisor = models.ForeignKey(Volunteer, related_name="Area_supervisor")
     event = models.ForeignKey(Event)
 
-    # def __str__(self):
-    #     return '{} {} {}'.format(self.name, self.description, self.place_number)
-
-    # def supername(self):
-    #     super = Area.supervisor
-    #
-    #     name = vol.first_name + " " + vol.last_name
-    #     return name
+    def __str__(self):
+        return '{} {} {}'.format(self.name, self.description, self.place_number)
 
 
 class Transaction(models.Model):
@@ -156,7 +150,7 @@ class Transaction(models.Model):
     date_shipped = models.DateField(null=True, blank=True)
     shipped_by = models.ForeignKey(Volunteer, related_name="transaction_shipped_by", null=True, blank=True)
     tracking_number = models.CharField(max_length=50, blank=True, null=True)
-    user = models.ForeignKey(User, )
+    user = models.ForeignKey(User)
     volunteer = models.ForeignKey(Volunteer, null=True, blank=True, related_name="transaction_volunteer")
 
     def __str__(self):
@@ -247,7 +241,7 @@ class LineItem(models.Model):
     # Changed the OneToOne fields to Foreign key fields
     product = models.ForeignKey(Product, null=True, blank=True, related_name='LineItem_Product')
     personalized_product = models.ForeignKey(PersonalizedProduct, null=True,
-                                                blank=True, related_name='PersonalizedProduct'),
+                                             blank=True, related_name='PersonalizedProduct'),
     rental_line_item = models.ForeignKey(RentalLineItem, null=True, blank=True, related_name='RentalLineItem')
     return_line_item = models.ForeignKey(ReturnLineItem, null=True, blank=True, related_name='ReturnLineItem')
 

@@ -7,7 +7,7 @@ $(function(){
         $.loadmodal({
             url: '/retail/rental.create_rentalline_item/' + rid,
             title: 'Shopping Cart',
-            width: '600px'
+            width: '800px'
         });
     });
 

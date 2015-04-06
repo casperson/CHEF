@@ -88,3 +88,9 @@ header {
 /*.middle-div{*/
     /*position: relative;*/
 /*}*/
+
+#love {
+    margin: 5px 0px 5px 0px;
+    font-size: 2em;
+
+}

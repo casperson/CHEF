@@ -4,10 +4,10 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1428209942.792045
+_modified_time = 1428209478.603874
 _enable_loop = True
-_template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\homepage\\templates/base.htm'
-_template_uri = 'base.htm'
+_template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF/homepage/templates/base.htm'
+_template_uri = '/homepage/templates/base.htm'
 _source_encoding = 'ascii'
 import os, os.path, re
 _exports = ['content_center']
@@ -19,11 +19,11 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
+        self = context.get('self', UNDEFINED)
+        request = context.get('request', UNDEFINED)
         def content_center():
             return render_content_center(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        request = context.get('request', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n')
         __M_writer('\r\n')
@@ -82,6 +82,6 @@ def render_content_center(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"uri": "base.htm", "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\homepage\\templates/base.htm", "source_encoding": "ascii", "line_map": {"64": 89, "65": 89, "71": 79, "77": 79, "16": 4, "18": 0, "83": 77, "28": 2, "29": 4, "30": 5, "34": 5, "35": 13, "36": 16, "37": 22, "38": 27, "39": 27, "40": 27, "41": 28, "42": 28, "43": 32, "44": 32, "45": 32, "46": 47, "47": 48, "48": 48, "49": 48, "50": 50, "51": 51, "52": 54, "53": 57, "54": 58, "55": 65, "57": 68, "62": 81, "63": 89}}
+{"uri": "/homepage/templates/base.htm", "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF/homepage/templates/base.htm", "line_map": {"64": 89, "65": 89, "71": 79, "77": 79, "16": 4, "18": 0, "83": 77, "28": 2, "29": 4, "30": 5, "34": 5, "35": 13, "36": 16, "37": 22, "38": 27, "39": 27, "40": 27, "41": 28, "42": 28, "43": 32, "44": 32, "45": 32, "46": 47, "47": 48, "48": 48, "49": 48, "50": 50, "51": 51, "52": 54, "53": 57, "54": 58, "55": 65, "57": 68, "62": 81, "63": 89}, "source_encoding": "ascii"}
 __M_END_METADATA
 """

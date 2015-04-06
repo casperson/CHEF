@@ -6,8 +6,8 @@ __M_locals_builtin = locals
 _magic_number = 10
 _modified_time = 1427506248.64365
 _enable_loop = True
-_template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\retail\\scripts/product.shoppingcart.jsm'
-_template_uri = 'product.shoppingcart.jsm'
+_template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\retail\\scripts/product.shoppingcart.js'
+_template_uri = 'product.shoppingcart.js'
 _source_encoding = 'ascii'
 import os, os.path, re
 _exports = []
@@ -26,6 +26,6 @@ def render_body(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "ascii", "uri": "product.shoppingcart.jsm", "line_map": {"16": 0, "27": 21, "21": 1}, "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\retail\\scripts/product.shoppingcart.jsm"}
+{"source_encoding": "ascii", "uri": "product.shoppingcart.js", "line_map": {"16": 0, "27": 21, "21": 1}, "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\retail\\scripts/product.shoppingcart.js"}
 __M_END_METADATA
 """

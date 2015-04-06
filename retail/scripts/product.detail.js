@@ -8,7 +8,7 @@ $(function(){
         $.loadmodal({
             url: '/retail/product.create_line_item/' + pid + "/" + qid + "/product",
             title: 'Shopping Cart',
-            width: '500px'
+            width: '800px'
         });
 
     });

@@ -1,14 +1,13 @@
-<%inherit file="/homepage/templates/base.htm" />
 
 <%block name="content_center">
     <div>
         <div class="email-header">
             <img class="col-md-3" src="${ STATIC_URL }homepage/media/ch_logo.png" alt="Colonial Heritage Foundation"/>
             <p class="col-md-3"></p>
-            <h2 class="col-md-6  right-align"><span style="color: red; font-weight: bold;">2</span> Overdue Items as of 3/20/2015</h2>
+            <h2 class="col-md-6  right-align"><span style="color: red; font-weight: bold;">2</span> Overdue Items as of ${ today }</h2>
         </div>
         <div class="email-body">
-            <h3>Hello Sterling,</h3>
+            <h3>Hello ${ user.first_name },</h3>
             <p>The following items are still rented out under your account and are now considered overdue. The items and their
             corresponding fees are listed below.</p>
             <p>Payment is due immediately.</p>
@@ -26,61 +25,51 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Pistol</td>
-                    <td>3/19/2015</td>
-                    <td>1 (x $1.50/day)</td>
-                    <td>$1.50</td>
+                    <td>${ overdueItem['id'] }</td>
+                    <td>${ overdueItem['name'] }</td>
+                    <td>${ overdueItem['dateDue'] }</td>
+                    <td>${ overdueItem['daysLate'] } (x $${ overdueItem['fee'] }/day)</td>
+                    <td>${ overdueItem['latefee'] }</td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Boots</td>
-                    <td>3/15/2015</td>
-                    <td>5  (x $1.05/day)</td>
-                    <td>$5.25</td>
-                </tr>
-##                %for product in overdues:
-##                <tr>
-##                    <td>${product.id} </td>
-##                    <td>${product.date_due}</td>
-##                </tr>
-##                %endfor
             </tbody>
         </table>
         <div>
-            <p>The following items are currently checked out, but are not yet due. Failure to return by due date will
-            result in a late fee.</p>
-            <h3>Rented Items</h3>
         </div>
-        <table class="table table-striped table-condensed">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Item Name</th>
-                    <th>Date Due</th>
-                    <th>Remaining Days Until Late</th>
-##                    <th>Current Fee Owed</th>
-                    <th>Date Payment Received</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>3</td>
-                    <td>Cravat</td>
-                    <td>3/25/2015</td>
-                    <td>5</td>
-##                    <td>$1.50</td>
-                    <td>Not Paid </td>
-                </tr>
-##                %for product in overdues:
-##                <tr>
-##                    <td>${product.id} </td>
-##                    <td>${product.date_due}</td>
-##                </tr>
-##                %endfor
-            </tbody>
-        </table>
-        <br/><br/><br/>
-        <h3>As always, thank you for choosing the Colonial Heritage Foundation and we look forward to seeing you in the future.</h3>
     </div>
 </%block>
+
+
+##            <p>The following items are currently checked out, but are not yet due. Failure to return by due date will
+##            result in a late fee.</p>
+##            <h3>Rented Items</h3>
+##        </div>
+##        <table class="table table-striped table-condensed">
+##            <thead>
+##                <tr>
+##                    <th>ID</th>
+##                    <th>Item Name</th>
+##                    <th>Date Due</th>
+##                    <th>Remaining Days Until Late</th>
+####                    <th>Current Fee Owed</th>
+##                    <th>Date Payment Received</th>
+##                </tr>
+##            </thead>
+##            <tbody>
+##                <tr>
+##                    <td>3</td>
+##                    <td>Cravat</td>
+##                    <td>3/25/2015</td>
+##                    <td>5</td>
+####                    <td>$1.50</td>
+##                    <td>Not Paid </td>
+##                </tr>
+####                %for product in overdues:
+####                <tr>
+####                    <td>${product.id} </td>
+####                    <td>${product.date_due}</td>
+####                </tr>
+####                %endfor
+##            </tbody>
+##        </table>
+##        <br/><br/><br/>
+##        <h3>As always, thank you for choosing the Colonial Heritage Foundation and we look forward to seeing you in the future.</h3>

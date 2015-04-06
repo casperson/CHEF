@@ -4,10 +4,10 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1422155619.247751
+_modified_time = 1428210426.161605
 _enable_loop = True
-_template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\homepage\\templates/index3.html'
-_template_uri = 'index3.html'
+_template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\homepage\\templates/index.html'
+_template_uri = 'index.html'
 _source_encoding = 'ascii'
 import os, os.path, re
 _exports = ['content_center']
@@ -31,7 +31,7 @@ def render_body(context,**pageargs):
         def content_center():
             return render_content_center(context._locals(__M_locals))
         __M_writer = context.writer()
-        __M_writer('\r\n\r\n')
+        __M_writer('\r\n<head>\r\n    <meta name="description" content="The Colonial Heritage Foundation">\r\n    <meta name="keywords" content="Colonial Heritage, historical reenactment, american revolution, festival">\r\n    <meta name="author" content="The Colonial Heritage Foundation">\r\n</head>\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content_center'):
             context['self'].content_center(**pageargs)
         
@@ -55,6 +55,6 @@ def render_content_center(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\homepage\\templates/index3.html", "line_map": {"56": 50, "34": 1, "27": 0, "44": 3, "50": 3}, "uri": "index3.html", "source_encoding": "ascii"}
+{"uri": "index.html", "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\homepage\\templates/index.html", "source_encoding": "ascii", "line_map": {"56": 50, "34": 1, "27": 0, "44": 8, "50": 8}}
 __M_END_METADATA
 """

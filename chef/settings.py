@@ -41,6 +41,8 @@ INSTALLED_APPS = (
     'homepage',
     'account',
     'retail',
+    'bootstrapform',
+    'password_reset',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -97,6 +99,13 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'chefbyu@gmail.com'
+EMAIL_HOST_PASSWORD = 'ISRocks!'
+EMAIL_PORT = 587
+LOGIN_URL = '/homepage'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/

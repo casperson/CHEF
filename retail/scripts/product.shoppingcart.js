@@ -6,22 +6,21 @@ $(function(){
         //
         //});
 
-        var lid =  $(this).attr('data-pid');
 
         $('.delete_line_item').on('click', function() {
 
+            var pid =  $(this).attr('data-pid');
             $.ajax({
-                url: '/retail/rental.delete_line_item/' + lid
+                url: '/retail/product.delete_line_item/' + pid
             });
 
         });
 
-        var rid =  $(this).attr('data-rid');
-
         $('.delete_rental_item').on('click', function() {
 
+             var rid =  $(this).attr('data-rid');
             $.ajax({
-                url: '/retail/rental.delete_line_item/' + rid
+                url: '/retail/rental.delete_rental_item/' + rid
             });
 
         });

@@ -9,6 +9,9 @@ from django import forms
 from django.contrib.auth.decorators import permission_required, login_required
 from .. import dmp_render_to_response, dmp_render
 from django.core import management
+from django.core.mail import send_mail
+import datetime
+import decimal
 import pprint
 
 templater = get_renderer('retail')
@@ -104,13 +107,13 @@ def delete_line_item(request):
 
     lineitem.delete()
 
-    # return HttpResponse('''
-    #             <script>
-    #                 window.location.href = window.location.href;
-    #             </script>
-    #         ''')
+    return HttpResponse('''
+                <script>
+                    window.location.href = window.location.href;
+                </script>
+            ''')
 
-    return HttpResponseRedirect('retail/product.shoppingcart.html')
+    # return HttpResponseRedirect('retail/product.shoppingcart.html')
 
 
 @view_function
@@ -239,28 +242,59 @@ def batch(request):
     # management.call_command('check_rentals', request)
     return dmp_render_to_response(request, 'check_rentals.html', params)
 
+
 @view_function
-def confirmation(request):
+def overduereport(request):
     params = {}
 
-    products = hmod.Product.objects.all()
+    rentals = hmod.RentalLineItem.objects.all()
+    overdues = []
+    thirty =[]
+    sixty = []
+    ninety =[]
 
-    # c = Context({'username': request.user.username})
-    # # text_content = render_to_string('mail/email.txt', c)
-    # html_content = render_to_string('order.confirmation.html', c)
-    #
-    # email = EmailMultiAlternatives('Subject', html_content, "text/html")
-    # email.attach_alternative(html_content, "text/html")
-    # email.to = ['to@example.com']
-    # email.send()
-    #
-    #
-    # subject, from_email, to = 'hello', 'from@example.com', 'to@example.com'
-    # text_content = 'This is an important message.'
-    # html_content = '<p>This is an <strong>important</strong> message.</p>'
-    # msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
-    # msg.attach_alternative(html_content, "text/html")
-    # msg.send()
+    now = datetime.datetime.now().date()
 
-    params['products'] = products
-    return dmp_render_to_response(request, 'order.confirmation.html', params)
+    for rental in rentals:
+        if rental.date_due < now:
+            overdues.append(rental)
+        else:
+            pass
+
+    for overdue in overdues:
+        fee = None
+        if overdue.rentable_item is not None:
+            fee = hmod.RentableItem.objects.get(id=overdue.rentable_item.id)
+        elif overdue.wardrobe_item is not None:
+            fee = hmod.RentableItem.objects.get(id=overdue.wardrobe_item.id)
+
+        item = hmod.LineItem.objects.get(rental_line_item=overdue)
+        print(item)
+        # shoppingcart = hmod.ShoppingCart.objects.get(user=item.shopping_cart)
+        user = hmod.User.objects.get(id=item.shopping_cart.user_id)
+        dayslatecalc = now - overdue.date_due
+        dayslate = dayslatecalc.days.numerator
+
+        overdueItem = {
+            'id': item.id,
+            'name': item.rental_item_name,
+            'datedue': overdue.date_due,
+            'price': fee.price_per_day,
+            'dayslate': dayslate,
+            'latefee': fee.price_per_day * dayslate,
+            'today': now,
+            'renter': user.first_name + user.last_name,
+        }
+
+        if 60 > dayslate > 29:
+            thirty.append(overdueItem)
+        elif 60 < dayslate < 90:
+            sixty.append(overdueItem)
+        elif dayslate > 89:
+            ninety.append(overdueItem)
+
+    params['thirty'] = thirty
+    params['sixty'] = sixty
+    params['ninety'] = ninety
+
+    return dmp_render_to_response(request, 'overdue_report.html',params)

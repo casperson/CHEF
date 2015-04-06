@@ -11,6 +11,7 @@ from .. import dmp_render_to_response, dmp_render
 from django.core import management
 templater = get_renderer('retail')
 
+
 @view_function
 # @permission_required('admin.agent_rights' , '/homepage/login')
 def process_request(request):
@@ -31,8 +32,8 @@ def create_rentalline_item(request):
     # wardrobeitem = ''
 
     rentalLineItem = hmod.RentalLineItem()
-    rentalLineItem.date_due = '2015-05-05'
-    rentalLineItem.date_out = '2015-04-01'
+    rentalLineItem.date_due = '2015-02-05'
+    rentalLineItem.date_out = '2015-02-01'
     rentalLineItem.discount_percent = 2.5
     rentalLineItem.rentable_item = rentableitem
     # rentalLineItem.wardrobe_item = wardrobeitem
@@ -54,3 +55,25 @@ def manage(request):
     params['lineitems'] = lineitems
 
     return templater.render_to_response(request, 'rental.manage.html', params)
+
+
+@view_function
+# @permission_required('admin.agent_rights', '/retail/login')
+def delete_rental_item(request):
+
+    try:
+        lineitem = hmod.LineItem.objects.get(id=request.urlparams[0])
+        rentalitem = hmod.RentalLineItem.objects.get(id=request.urlparams[0])
+    except hmod.LineItem.DoesNotExist:
+        return HttpResponseRedirect('/retail/product/')
+
+    lineitem.delete()
+    rentalitem.delete()
+
+    return HttpResponse('''
+                <script>
+                    window.location.href = window.location.href;
+                </script>
+            ''')
+
+    # return HttpResponseRedirect('retail/product.shoppingcart.html')

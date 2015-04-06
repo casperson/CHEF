@@ -1,0 +1,82 @@
+<%inherit file="/homepage/templates/base.htm" />
+
+<%block name="content_center">
+    <div>
+
+        <h3>Items Over 30 Days</h3>
+        <table class="table table-striped table-condensed receipt-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Item Name</th>
+                <th>Date Due</th>
+                <th>Days Late</th>
+                <th>Current Fee Owed</th>
+                <th>Renter</th>
+            </tr>
+        </thead>
+        <tbody>
+            %for rentalitem in thirty:
+                <tr>
+                    <td>${ rentalitem['id'] }</td>
+                    <td>${ rentalitem['name'] } </td>
+                    <td>${ rentalitem['datedue'] } </td>
+                    <td>${ rentalitem['dayslate'] } (x $${ rentalitem['price'] }/day)</td>
+                    <td>${ rentalitem['latefee'] }</td>
+                    <td>${ rentalitem['renter'] }</td>
+                </tr>
+            %endfor
+        </tbody>
+        </table>
+        <h3>Items Over 60 Days</h3>
+        <table class="table table-condensed receipt-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Item Name</th>
+                <th>Date Due</th>
+                <th>Days Late</th>
+                <th>Current Fee Owed</th>
+                <th>Renter</th>
+            </tr>
+        </thead>
+        <tbody>
+            %for rentalitem in sixty:
+                <tr>
+                    <td>${ rentalitem['id'] }</td>
+                    <td>${ rentalitem['name'] } </td>
+                    <td>${ rentalitem['datedue'] } </td>
+                    <td>${ rentalitem['dayslate'] } (x $${ rentalitem['price'] }/day)</td>
+                    <td>${ rentalitem['latefee'] }</td>
+                    <td>${ rentalitem['renter'] }</td>
+                </tr>
+            %endfor
+        </tbody>
+        </table>
+        <h3>Items Over 90 Days</h3>
+        <table class="table table-condensed receipt-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Item Name</th>
+                <th>Date Due</th>
+                <th>Days Late</th>
+                <th>Current Fee Owed</th>
+                <th>Renter</th>
+            </tr>
+        </thead>
+        <tbody>
+            %for rentalitem in ninety:
+                <tr>
+                    <td>${ rentalitem['id'] }</td>
+                    <td>${ rentalitem['name'] } </td>
+                    <td>${ rentalitem['datedue'] } </td>
+                    <td>${ rentalitem['dayslate'] } (x $${ rentalitem['price'] }/day)</td>
+                    <td>${ rentalitem['latefee'] }</td>
+                    <td>${ rentalitem['renter'] }</td>
+                </tr>
+            %endfor
+        </tbody>
+        </table>
+    </div>
+</%block>

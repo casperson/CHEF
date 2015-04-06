@@ -1,3 +1,5 @@
+<%inherit file="/homepage/templates/base.htm" />
+
 <%block name="content_center">
     <div>
         <div class="email-header">
@@ -5,10 +7,10 @@
             <h2 class="col-md-3 right-align">Order Confirmation</h2>
         </div>
         <div class="email-body">
-            <h3>Hello ${ user.first_name },</h3>
-            <p>Thank you for shopping with us. Below are the details for your purchase on ${ today }.</p>
+            <h3>Success!</h3>
+            <p>Thank you for shopping with us ${ user.first_name }. Below are the details for your purchase on ${ today }.</p>
             <h3>Details</h3>
-            <p>Order #: ${ resp['ID'] }</p>
+            <p>Order #: ${ resp["ID"] }</p>
         </div>
         <h3>Sale Items</h3>
         <table class="table table-condensed receipt-table">
@@ -29,7 +31,7 @@
                     </td>
                     <td>${ lineitem.product_name() } </td>
                     <td>${ lineitem.product.description } </td>
-                    <td><input class="col-md-2" type="text"  value="1" disabled/></td>
+                    <td><input class="col-md-2" type="text"  value="${ lineitem.quantity }" disabled/></td>
                     <td><input class="col-md-3" type="text" value="${ lineitem.product_price() }" disabled/></td>
                 </tr>
                 %endfor
@@ -56,16 +58,16 @@
                         </td>
                         <td>${ rentalitem.rental_item_name() } </td>
                         <td>${ rentalitem.rental_item_description() } </td>
-                        <td><input class="col-md-2" type="text"  value="1" disabled/></td>
+                        <td><input class="col-md-2" type="text"  value="${ rentalitem.quantity }" disabled/></td>
                         <td><input class="col-md-3" type="text" value="${ rentalitem.rental_item_price() }" disabled/></td>
                     </tr>
                 %endfor
             </tbody>
         </table>
         <div class="right-align receipt">
-            <p>Subtotal: $${ subtotal }</p>
-            <p>Tax (6.5%): $${ tax }3</p>
-            <p  class="receipt">Total: $${ total }</p>
+            <p>Subtotal: $ ${ subtotal }</p>
+            <p>Tax (6.5%): $ ${ tax }</p>
+            <p  class="receipt">Total: $ ${ total }</p>
         </div>
     </div>
 </%block>

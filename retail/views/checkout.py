@@ -36,6 +36,7 @@ def checkout(request):
     cart = hmod.ShoppingCart.objects.get(user_id=request.user.id)
     lineitems = hmod.LineItem.objects.all().filter(shopping_cart=cart, rental_line_item=None, return_line_item=None)
     rentalitems = hmod.LineItem.objects.all().filter(shopping_cart=cart, product=None, return_line_item=None)
+    returnitems = hmod.LineItem.objects.all().filter(shopping_cart=cart, product=None, rental_line_item=None)
     address = hmod.Address.objects.get(user=request.user)
 
     producttotal = 0
@@ -48,13 +49,19 @@ def checkout(request):
         rentalitemtotal = rentalitem.rental_item_price() * rentalitem.quantity
         rentaltotal += rentalitemtotal
 
+    returntotal = 0
+    for returnitem in returnitems:
+        returnitemtotal = returnitem.return_line_item.rental_line_item.calc_returntotal()
+        returntotal += returnitemtotal
+
     taxrate = Decimal(0.065)
-    tax = round((rentaltotal + producttotal) * taxrate, 2)
-    total = round(rentaltotal + producttotal + tax, 2)
+    tax = round((rentaltotal + producttotal + returntotal) * taxrate, 2)
+    total = round(rentaltotal + producttotal + returntotal + tax, 2)
     subtotal = round((total - tax), 2)
 
     params['lineitems'] = lineitems
     params['rentalitems'] = rentalitems
+    params['returnitems'] = returnitems
     params['total'] = total
     params['tax'] = tax
     params['address'] = address

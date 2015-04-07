@@ -115,16 +115,16 @@ def create_return_lineitem(request):
 
     rentalid = request.urlparams[0]
     rentalitem = hmod.RentalLineItem.objects.get(id=rentalid)
-    rentalitem.returned = True
-    rentalitem.save()
     now = datetime.datetime.now().date()
 
     returnLineItem = hmod.ReturnLineItem()
     returnLineItem.date_in = now
     # returnLineItem.damage_fee = params['damage_fee']
+    returnLineItem.rental_line_item = rentalitem
     returnLineItem.days_late = returnLineItem.rental_line_item.calc_dayslate()
     returnLineItem.late_fee = returnLineItem.rental_line_item.calc_latefee()
-    returnLineItem.rental_line_item = rentalitem
+    rentalitem.returned = True
+    rentalitem.save()
     returnLineItem.save()
 
     subtotal = returnLineItem.rental_line_item.calc_subtotal()
@@ -132,7 +132,7 @@ def create_return_lineitem(request):
     tax = returnLineItem.rental_line_item.calc_tax()
     return_total = returnLineItem.rental_line_item.calc_returntotal()
 
-    params['dayslate'] = returnLineItem.calc_dayslate()
+    params['dayslate'] = returnLineItem.rental_line_item.calc_dayslate()
     params['subtotal'] = subtotal
     params['latefee'] = latefee
     params['tax'] = tax

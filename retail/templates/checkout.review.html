@@ -46,6 +46,9 @@
                                         </div>
                                     </div>
                                     <div class="panel-body">
+                                        %if len(lineitems) > 0:
+                                            <h3>Sale Items</h3>
+                                        %endif
                                         %for lineitem in lineitems:
                                         <div class="row">
                                             <div class="col-xs-2"><img class="img-responsive" src="${ STATIC_URL }retail/media/${ lineitem.product_name() }.jpg/">
@@ -69,6 +72,9 @@
                                         </div>
                                         <hr>
                                         %endfor
+                                        %if len(rentalitems) > 0:
+                                            <h3>Rental Items</h3>
+                                        %endif
                                         %for rentalitem in rentalitems:
                                         <div class="row">
                                             <div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
@@ -79,6 +85,32 @@
                                             <div class="col-xs-6">
                                                 <div class="col-xs-6 text-right">
                                                     <h6><strong>${ rentalitem.rental_item_price() } <span class="text-muted">x</span></strong></h6>
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <input type="text" class="form-control input-sm" value="1">
+                                                </div>
+                                                <div class="col-xs-2">
+                                                    <button type="button" class="btn btn-link btn-xs">
+                                                        <span class="glyphicon glyphicon-trash"> </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        %endfor
+                                        %if len(returnitems) > 0:
+                                            <h3>Return Items</h3>
+                                        %endif
+                                        %for returnitem in returnitems:
+                                        <div class="row">
+                                            <div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <h4 class="product-name"><strong>${ returnitem.return_item_name() }</strong></h4><h4><small>Rental description</small></h4>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <div class="col-xs-6 text-right">
+                                                    <h6><strong>${ returnitem.return_line_item.rental_line_item.calc_returntotal() } <span class="text-muted">x</span></strong></h6>
                                                 </div>
                                                 <div class="col-xs-4">
                                                     <input type="text" class="form-control input-sm" value="1">

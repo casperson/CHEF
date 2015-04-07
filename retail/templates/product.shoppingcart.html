@@ -109,7 +109,7 @@
                 <tr>
                     <th>${ returnitem.id }</th>
                     <td>${ returnitem.return_item_name() }</td>
-                    <td>${ returnitem.return_item_price() }</td>
+                    <td>${ returnitem.return_line_item.rental_line_item.calc_returntotal() }</td>
                     <td>${ returnitem.quantity }</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="...">

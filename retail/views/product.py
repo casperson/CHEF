@@ -169,7 +169,7 @@ def create_line_item(request):
         lineItem.return_line_item = returnLineItem
         lineItem.save()
 
-        return HttpResponse('/retail/rental.manage')
+        return HttpResponseRedirect('/retail/rental.manage')
 
     params['pid'] = pid
 

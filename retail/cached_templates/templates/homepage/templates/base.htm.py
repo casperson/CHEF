@@ -4,7 +4,7 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1428210357.629715
+_modified_time = 1428422737.026223
 _enable_loop = True
 _template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF/homepage/templates/base.htm'
 _template_uri = '/homepage/templates/base.htm'
@@ -19,11 +19,11 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        request = context.get('request', UNDEFINED)
         def content_center():
             return render_content_center(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        request = context.get('request', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n')
         __M_writer('\r\n')
@@ -51,7 +51,7 @@ def render_body(context,**pageargs):
             __M_writer('                        <button id="show_login_dialog" class="btn btn-success">Login</button>\r\n                        <button id="create_account_btn" class="btn btn-warning">Create Account</button>\r\n')
         __M_writer('                    <ul class="nav nav-tabs">\r\n                        <li role="menu"><a href="/homepage/index/">Home</a></li>\r\n                        <li role="phone"><a href="/retail/product/">Product List</a></li>\r\n')
         if request.user.is_authenticated():
-            __M_writer('                            <li role="person"><a href="/account/user/">Users</a></li>\r\n                            <li role="rentals"><a href="/retail/rental/">Rentable Items</a></li>\r\n                            <li role="festivals"><a href="/homepage/events/">Festivals</a></li>\r\n                            <li role="menu"><a href="/homepage/item/">Inventory</a></li>\r\n                            <li><a href="/../account/account/">My Account</a></li>\r\n                            <li><button class="btn btn-warning" id="shopping_cart_dialog2"><i class="fa fa-shopping-cart"></i> Shopping Cart</button></li>\r\n                            <br/>\r\n')
+            __M_writer('                            <li role="person"><a href="/account/user/">Users</a></li>\r\n                            <li role="rentals"><a href="/retail/rental/">Rentable Items</a></li>\r\n                            <li role="manage rentals"><a href="/retail/rental.manage">Manage Rentals</a></li>\r\n                            <li role="festivals"><a href="/homepage/events/">Festivals</a></li>\r\n                            <li role="menu"><a href="/homepage/item/">Inventory</a></li>\r\n                            <li><a href="/../account/account/">My Account</a></li>\r\n                            <li><button class="btn btn-warning" id="shopping_cart_dialog2"><i class="fa fa-shopping-cart"></i> Shopping Cart</button></li>\r\n                            <br/>\r\n')
         else:
             pass
         __M_writer('                    </ul>\r\n                </div>\r\n            </div>\r\n            <div style="background-color: #A41425; height: 2px"></div>\r\n        </header>\r\n\r\n        <div class="container-fluid base-body">\r\n            <div class="col-xs-1" style="background-color: navy; height: 1000px">\r\n\r\n            </div>\r\n            <div class="col-xs-10">\r\n                ')
@@ -82,6 +82,6 @@ def render_content_center(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"uri": "/homepage/templates/base.htm", "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF/homepage/templates/base.htm", "source_encoding": "ascii", "line_map": {"64": 89, "65": 89, "71": 79, "77": 79, "16": 4, "18": 0, "83": 77, "28": 2, "29": 4, "30": 5, "34": 5, "35": 13, "36": 16, "37": 22, "38": 27, "39": 27, "40": 27, "41": 28, "42": 28, "43": 32, "44": 32, "45": 32, "46": 47, "47": 48, "48": 48, "49": 48, "50": 50, "51": 51, "52": 54, "53": 57, "54": 58, "55": 65, "57": 68, "62": 81, "63": 89}}
+{"filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF/homepage/templates/base.htm", "line_map": {"64": 90, "65": 90, "71": 80, "77": 80, "16": 4, "18": 0, "83": 77, "28": 2, "29": 4, "30": 5, "34": 5, "35": 13, "36": 16, "37": 22, "38": 27, "39": 27, "40": 27, "41": 28, "42": 28, "43": 32, "44": 32, "45": 32, "46": 47, "47": 48, "48": 48, "49": 48, "50": 50, "51": 51, "52": 54, "53": 57, "54": 58, "55": 66, "57": 69, "62": 82, "63": 90}, "uri": "/homepage/templates/base.htm", "source_encoding": "ascii"}
 __M_END_METADATA
 """

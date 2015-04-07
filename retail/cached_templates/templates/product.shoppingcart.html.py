@@ -4,7 +4,7 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1428381708.393142
+_modified_time = 1428423018.150613
 _enable_loop = True
 _template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\retail\\templates/product.shoppingcart.html'
 _template_uri = 'product.shoppingcart.html'
@@ -28,12 +28,12 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        lineitems = context.get('lineitems', UNDEFINED)
+        returnitems = context.get('returnitems', UNDEFINED)
+        rentalitems = context.get('rentalitems', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
-        rentalitems = context.get('rentalitems', UNDEFINED)
-        returnitems = context.get('returnitems', UNDEFINED)
+        lineitems = context.get('lineitems', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n\r\n<script src="')
         __M_writer(str( STATIC_URL ))
@@ -50,12 +50,12 @@ def render_body(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        lineitems = context.get('lineitems', UNDEFINED)
+        returnitems = context.get('returnitems', UNDEFINED)
+        rentalitems = context.get('rentalitems', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def content():
             return render_content(context)
-        rentalitems = context.get('rentalitems', UNDEFINED)
-        returnitems = context.get('returnitems', UNDEFINED)
+        lineitems = context.get('lineitems', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n    <div id="shoppingcartform">\r\n        <h3>Sale Items</h3>\r\n        <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">\r\n            <thead>\r\n                <th>Picture</th>\r\n                <th>Name</th>\r\n                <th>Price</th>\r\n                <th>Quantity</th>\r\n                <th>Delete</th>\r\n            </thead>\r\n            <tbody>\r\n')
         for lineitem in lineitems:
@@ -100,7 +100,7 @@ def render_content(context,**pageargs):
             __M_writer('</th>\r\n                    <td>')
             __M_writer(str( returnitem.return_item_name() ))
             __M_writer('</td>\r\n                    <td>')
-            __M_writer(str( returnitem.return_item_price() ))
+            __M_writer(str( returnitem.return_line_item.rental_line_item.calc_returntotal() ))
             __M_writer('</td>\r\n                    <td>')
             __M_writer(str( returnitem.quantity ))
             __M_writer('</td>\r\n                    <td>\r\n                        <div class="btn-group" role="group" aria-label="...">\r\n                        <a type="button" class="btn btn-default" href="/retail/product.edit_line_item/')
@@ -116,6 +116,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"uri": "product.shoppingcart.html", "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\retail\\templates/product.shoppingcart.html", "line_map": {"27": 0, "38": 1, "39": 4, "40": 4, "50": 5, "60": 5, "61": 18, "62": 19, "63": 21, "64": 21, "65": 21, "66": 21, "67": 23, "68": 23, "69": 24, "70": 24, "71": 25, "72": 25, "73": 28, "74": 28, "75": 30, "76": 30, "77": 30, "78": 48, "79": 52, "80": 64, "81": 65, "82": 66, "83": 66, "84": 67, "85": 67, "86": 68, "87": 68, "88": 69, "89": 69, "90": 72, "91": 72, "92": 74, "93": 74, "94": 74, "95": 92, "96": 96, "97": 108, "98": 109, "99": 110, "100": 110, "101": 111, "102": 111, "103": 112, "104": 112, "105": 113, "106": 113, "107": 116, "108": 116, "109": 117, "110": 117, "111": 122, "117": 111}, "source_encoding": "ascii"}
+{"filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\retail\\templates/product.shoppingcart.html", "line_map": {"27": 0, "38": 1, "39": 4, "40": 4, "50": 5, "60": 5, "61": 18, "62": 19, "63": 21, "64": 21, "65": 21, "66": 21, "67": 23, "68": 23, "69": 24, "70": 24, "71": 25, "72": 25, "73": 28, "74": 28, "75": 30, "76": 30, "77": 30, "78": 48, "79": 52, "80": 64, "81": 65, "82": 66, "83": 66, "84": 67, "85": 67, "86": 68, "87": 68, "88": 69, "89": 69, "90": 72, "91": 72, "92": 74, "93": 74, "94": 74, "95": 92, "96": 96, "97": 108, "98": 109, "99": 110, "100": 110, "101": 111, "102": 111, "103": 112, "104": 112, "105": 113, "106": 113, "107": 116, "108": 116, "109": 117, "110": 117, "111": 122, "117": 111}, "uri": "product.shoppingcart.html", "source_encoding": "ascii"}
 __M_END_METADATA
 """

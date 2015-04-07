@@ -1,0 +1,51 @@
+<%inherit file="base_ajax.htm"/>
+<%block name="content">
+    <div class="modal-header">
+        <h2>Rental Item Information</h2>
+    </div>
+    <div class="modal-body">
+        <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+            <tr style="font-size: medium">
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price Per Day</th>
+                <th>Date Due</th>
+                <th>Days Late</th>
+                <th></th>
+            </tr>
+            <tr style="font-size: medium">
+                <td> ${ lineitem.rental_line_item.rentable_item.name } </td>
+                <td> ${ lineitem.quantity } </td>
+                <td> ${ lineitem.rental_line_item.rentable_item.price_per_day } </td>
+                <td> ${ lineitem.rental_line_item.date_due } </td>
+                <td> ${ dayslate } </td>
+            </tr>
+        </table>
+        <br/>
+        <p style="font-size: 1.1em">Sub Total: $${ subtotal }</p>
+        <p style="font-size: 1.1em">Late Fee: $${ latefee }</p>
+        <p style="font-size: 1.1em">Tax: $${ tax }</p>
+        <br/>
+        <p style="font-size: 1.1em">Condition When Rented:
+            <span style="color: darkgreen; font-weight: bold">${ lineitem.rental_line_item.rentable_item.condition }</span>
+        </p>
+        <p style="font-size: 1.1em">Condition When Returned:
+            <select>
+                <option style="color: darkgreen" value="Good">Good</option>
+                <option style="color: darkgoldenrod" value="OK">OK</option>
+                <option style="color:orange;" value="Poor">Poor</option>
+                <option style="color: #A41425" value="usable">Broken</option>
+            </select>
+        </p>
+        <br/>
+        <p style="color: #A41425">Damage Fee:
+            <input type="text"/>
+            <button style="margin-right: 275px" type="button" class="btn btn-danger pull-right">Add Fee</button>
+        </p>
+    </div>
+    <div class="modal-footer">
+        <p style="font-size:1.5em" class="pull-left">Total Amount Due: $${ return_total }</p>
+        <a href="rental.create_return_lineitem/${lineitem.rental_line_item_id}/" type="button" class="btn btn-warning">Return and Add to Transaction</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+    </div>
+</%block>

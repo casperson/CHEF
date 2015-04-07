@@ -9,6 +9,7 @@ from django import forms
 from django.contrib.auth.decorators import permission_required, login_required
 from .. import dmp_render_to_response, dmp_render
 from django.core import management
+import datetime
 templater = get_renderer('retail')
 
 
@@ -50,7 +51,14 @@ def create_rentalline_item(request):
 def manage(request):
     params = {}
 
-    lineitems = hmod.LineItem.objects.all().filter(product=None, return_line_item=None)
+    lineitems = []
+    rentalitems = hmod.RentalLineItem.objects.all().filter(returned=False)
+    for rentalitem in rentalitems:
+        try:
+            lineitem = hmod.LineItem.objects.get(rental_line_item=rentalitem)
+            lineitems.append(lineitem)
+        except hmod.LineItem.DoesNotExist:
+            pass
 
     params['lineitems'] = lineitems
 
@@ -76,4 +84,58 @@ def delete_rental_item(request):
                 </script>
             ''')
 
-    # return HttpResponseRedirect('retail/product.shoppingcart.html')
+
+@view_function
+def return_lineitem(request):
+    params = {}
+
+    rid = request.urlparams[0]
+    rentalitem = hmod.RentalLineItem.objects.get(id=rid)
+    lineitem = hmod.LineItem.objects.get(rental_line_item=rentalitem)
+
+    dayslate = rentalitem.calc_dayslate()
+    subtotal = rentalitem.calc_subtotal()
+    latefee = rentalitem.calc_latefee()
+    tax = rentalitem.calc_tax()
+    return_total = rentalitem.calc_returntotal()
+
+    params['lineitem'] = lineitem
+    params['dayslate'] = dayslate
+    params['subtotal'] = subtotal
+    params['latefee'] = latefee
+    params['tax'] = tax
+    params['return_total'] = return_total
+
+    return templater.render_to_response(request, 'return_lineitem.html', params)
+
+
+@view_function
+def create_return_lineitem(request):
+    params = {}
+
+    rentalid = request.urlparams[0]
+    rentalitem = hmod.RentalLineItem.objects.get(id=rentalid)
+    rentalitem.returned = True
+    rentalitem.save()
+    now = datetime.datetime.now().date()
+
+    returnLineItem = hmod.ReturnLineItem()
+    returnLineItem.date_in = now
+    # returnLineItem.damage_fee = params['damage_fee']
+    returnLineItem.days_late = returnLineItem.rental_line_item.calc_dayslate()
+    returnLineItem.late_fee = returnLineItem.rental_line_item.calc_latefee()
+    returnLineItem.rental_line_item = rentalitem
+    returnLineItem.save()
+
+    subtotal = returnLineItem.rental_line_item.calc_subtotal()
+    latefee = returnLineItem.rental_line_item.calc_latefee()
+    tax = returnLineItem.rental_line_item.calc_tax()
+    return_total = returnLineItem.rental_line_item.calc_returntotal()
+
+    params['dayslate'] = returnLineItem.calc_dayslate()
+    params['subtotal'] = subtotal
+    params['latefee'] = latefee
+    params['tax'] = tax
+    params['return_total'] = return_total
+
+    return HttpResponseRedirect('/retail/product.create_line_item/{}/1/return'.format(returnLineItem.id), params)

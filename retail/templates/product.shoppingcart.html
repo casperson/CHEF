@@ -95,6 +95,32 @@
              %endfor
         </table>
 
+        <h3>Return Rental Items</h3>
+        <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+            <thead>
+                <th>id</th>
+                <th>Return Item Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+             %for returnitem in returnitems:
+                <tr>
+                    <th>${ returnitem.id }</th>
+                    <td>${ returnitem.return_item_name() }</td>
+                    <td>${ returnitem.return_item_price() }</td>
+                    <td>${ returnitem.quantity }</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="...">
+                        <a type="button" class="btn btn-default" href="/retail/product.edit_line_item/${ returnitem.id }/"><i class="fa fa-edit"></i></a>
+                        <button data-rid="${ returnitem.id }"  class="btn btn-danger delete_rental_item">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+             %endfor
+        </table>
+
         <a href="/retail/checkout.checkout/" type="submit" class="btn btn-warning">Checkout</a>
     </div>
 </%block>

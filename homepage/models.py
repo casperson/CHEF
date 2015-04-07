@@ -3,6 +3,8 @@ __author__ = 'Group 2-5'
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from polymorphic import PolymorphicModel
+from decimal import Decimal
+import datetime
 
 
 STATES = (
@@ -177,6 +179,7 @@ class RentableItem(NonSaleItem):
     rental_price = models.DecimalField(max_digits=6, decimal_places=2)
     price_per_day = models.DecimalField(max_digits=4, decimal_places=2)
     replacement_price = models.DecimalField(max_digits=8, decimal_places=2)
+    condition = models.CharField(max_length=20, default='Good')
 
     def __str__(self):
         return '{} {} {}'.format(self.name, self.price_per_day, self.rental_price)
@@ -203,6 +206,41 @@ class RentalLineItem(models.Model):
     discount_percent = models.IntegerField(null=True, blank=True)
     rentable_item = models.ForeignKey(RentableItem, null=True, blank=True, related_name="rentable_item")
     wardrobe_item = models.ForeignKey(WardrobeItem, null=True, blank=True, related_name="wardrobe_item")
+    returned = models.BooleanField(default=False)
+
+    def calc_dayslate(self):
+        rentalitem = self
+        now = datetime.datetime.now().date()
+        dayslatecalc = now - rentalitem.date_due
+        if dayslatecalc.days.numerator < 0:
+            dayslate = 0
+        else:
+            dayslate = dayslatecalc.days.numerator
+
+        return dayslate
+
+    def calc_subtotal(self):
+        rentalitem = self
+        now = datetime.datetime.now().date()
+        days_out_calc = now - rentalitem.date_out
+        days_out = days_out_calc.days.numerator
+
+        subtotal = (rentalitem.rentable_item.price_per_day * days_out)
+        return subtotal
+
+    def calc_tax(self):
+        taxrate = Decimal(0.065)
+        tax = round(self.calc_subtotal() * taxrate, 2)
+        return tax
+
+    def calc_latefee(self):
+        rentalitem = self
+        latefee = rentalitem.rentable_item.price_per_day * self.calc_dayslate()
+        return latefee
+
+    def calc_returntotal(self):
+        returntotal = self.calc_subtotal() + self.calc_latefee() + self.calc_tax()
+        return returntotal
 
 
 class ReturnLineItem(models.Model):
@@ -237,8 +275,7 @@ class LineItem(models.Model):
     # save_for_later = models.BooleanField(default=False)
     transaction = models.ForeignKey(Transaction, null=True, blank=True)
     shopping_cart = models.ForeignKey(ShoppingCart, null=True, blank=True)
-
-    # Changed the OneToOne fields to Foreign key fields
+    user = models.ForeignKey(User, null=True, blank=True)
     product = models.ForeignKey(Product, null=True, blank=True, related_name='LineItem_Product')
     personalized_product = models.ForeignKey(PersonalizedProduct, null=True,
                                              blank=True, related_name='PersonalizedProduct'),
@@ -274,6 +311,16 @@ class LineItem(models.Model):
         rentalitem = self.rental_line_item
         description = rentalitem.rentable_item.description
         return description
+
+    def return_item_name(self):
+        returnitem = self.return_line_item
+        name = returnitem.rental_line_item.rentable_item.name
+        return name
+
+    def return_item_price(self):
+        returnitem = self.return_line_item
+        price = returnitem.rental_line_item.rentable_item.rental_price
+        return price
 
 
 class HistoricalFigure(models.Model):

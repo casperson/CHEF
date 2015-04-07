@@ -138,6 +138,7 @@ def create_line_item(request):
 
     lineItem = hmod.LineItem()
     cart = hmod.ShoppingCart.objects.get(user_id=request.user.id)
+    lineItem.user = request.user
 
     if decide == 'rental':
         rentallineitem = hmod.RentalLineItem.objects.get(id=pid)
@@ -157,6 +158,18 @@ def create_line_item(request):
         lineItem.product = product
         lineItem.rental_line_item = None
         lineItem.save()
+    elif decide == 'return':
+        returnLineItem = hmod.ReturnLineItem.objects.get(id=pid)
+        lineItem.amount = returnLineItem.rental_line_item.rentable_item.rental_price
+        lineItem.quantity = qty
+        lineItem.transaction = None
+        lineItem.shopping_cart = cart
+        lineItem.product = None
+        lineItem.rental_line_item = None
+        lineItem.return_line_item = returnLineItem
+        lineItem.save()
+
+        return HttpResponse('/retail/rental.manage')
 
     params['pid'] = pid
 
@@ -170,9 +183,11 @@ def shopping_cart(request):
     cart = hmod.ShoppingCart.objects.get(user_id=request.user.id)
     lineitems = hmod.LineItem.objects.all().filter(shopping_cart=cart, rental_line_item=None, return_line_item=None)
     rentalitems = hmod.LineItem.objects.all().filter(shopping_cart=cart, product=None, return_line_item=None)
+    returnitems = hmod.LineItem.objects.all().filter(shopping_cart=cart, product=None, rental_line_item=None)
 
     params['lineitems'] = lineitems
     params['rentalitems'] = rentalitems
+    params['returnitems'] = returnitems
 
     return dmp_render_to_response(request, 'product.shoppingcart.html', params)
 
@@ -277,18 +292,18 @@ def overduereport(request):
 
         overdueItem = {
             'id': item.id,
-            'name': item.rental_item_name,
+            'name': item.rental_item_name(),
             'datedue': overdue.date_due,
             'price': fee.price_per_day,
             'dayslate': dayslate,
             'latefee': fee.price_per_day * dayslate,
             'today': now,
-            'renter': user.first_name + user.last_name,
+            'renter': user.first_name + " " + user.last_name,
         }
 
         if 60 > dayslate > 29:
             thirty.append(overdueItem)
-        elif 60 < dayslate < 90:
+        elif 59 < dayslate < 90:
             sixty.append(overdueItem)
         elif dayslate > 89:
             ninety.append(overdueItem)

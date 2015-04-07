@@ -312,8 +312,8 @@ for data in [
     ret.save()
 
 for data in [
-    [8.00, 1, None, hmod.ShoppingCart.objects.get(user_id=1), hmod.Product.objects.get(id=3), None, None, None],
-    [10.00, 2, None, hmod.ShoppingCart.objects.get(user_id=1), None, None, hmod.RentalLineItem.objects.get(id=1), None],
+    [8.00, 1, None, hmod.ShoppingCart.objects.get(user_id=1), hmod.Product.objects.get(id=3), None, None, None, hmod.User.objects.get(id=1)],
+    [10.00, 2, None, hmod.ShoppingCart.objects.get(user_id=1), None, None, hmod.RentalLineItem.objects.get(id=1), None, hmod.User.objects.get(id=1)],
 ]:
 
     l = hmod.LineItem()
@@ -325,6 +325,7 @@ for data in [
     l.personalized_product = data[5]
     l.rental_line_item = data[6]
     l.return_line_item = data[7]
+    l.user = data[8]
     l.save()
 
 

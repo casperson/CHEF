@@ -1,19 +1,23 @@
-<%inherit file="base.htm" />
+<%inherit file="base_ajax.htm"/>
 
+<%block name="content">
 
-<%block name="content_center">
-
-    <form method="POST">
-
-        <table >
-           <break></break>
-            <p>
-                ${ form }
-
-            </p>
-
+    <form class="form-horizontal" id="EventEditForm" method="POST">
+        <table>
+            %for field in form:
+                <div class="form-group">
+                    <label for="id_${field.name}" class="col-sm-3 control-label">${field.label}</label>
+                    <div class="col-sm-9">
+                        ${field}
+                    </div>
+                </div>
+            %endfor
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-9">
+                    <button class="btn btn-success" type="submit">Save Event</button>
+                </div>
+            </div>
         </table>
-        <button type="submit">Submit</button>
 
     </form>
 

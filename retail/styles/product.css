@@ -2,13 +2,26 @@
     list-style: none;
 }
 
-li{
-    display: inline;
+#product_list li{
+    display: inline-block;
+    /*float: left;*/
+    width: 22%;
+    margin: 15px;
+    text-align: center;
+    border-bottom: 1px dotted black;
 }
 
 .product-image{
-    max-width: 150px;
+    max-width: 200px;
 }
+
+#product_list div {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.1em;
+}
+
 p{
-    display: inline;
+    /*display: inline;*/
+    font-size: 1.2em;
+    font-family: 'Roboto Slab', serif;
 }

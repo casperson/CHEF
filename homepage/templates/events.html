@@ -29,25 +29,28 @@
                             <td>${ event.end_date }</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="...">
-                                    <a href="/homepage/events.edit/${ event.id }" type="button" class="btn btn-default"><i class="fa fa-edit"></i></a>
-                                    <button type="button" data-toggle="modal" data-target="#form-modal" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                    <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                          <div class="modal-content">
-                                            <div class="modal-header">
-                                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                              <h4 class="modal-title">Delete Warning</h4>
-                                            </div>
-                                            <div id="form-modal-body" class="modal-body">
-                                                <p> Are you sure you want to DELETE "${ event.name }"</p>
-                                           </div>
-                                           <div class="modal-footer">
-                                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                             <a href="/homepage/events.delete/${ event.id }" class="btn btn-danger">Delete</a>
-                                           </div>
-                                         </div>
-                                       </div>
-                                    </div>
+                                    <button data-pid=${ event.id } type="button" class="btn btn-default EventEditForm"><i class="fa fa-edit"></i></button>
+                                    <button data-eid=${ event.id }type="button" class="btn btn-danger delete-event"><i class="fa fa-trash"></i></button>
+
+##                                    <button type="button" data-toggle="modal" data-target="#form-modal" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+##                                    <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+##                                        <div class="modal-dialog">
+##                                          <div class="modal-content">
+##                                            <div class="modal-header">
+##                                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+##                                              <h4 class="modal-title">Delete Warning</h4>
+##                                            </div>
+##                                            <div id="form-modal-body" class="modal-body">
+##                                                <p> Are you sure you want to DELETE "${ event.name }"</p>
+##                                           </div>
+##                                           <div class="modal-footer">
+##                                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+##                                             <a href="/homepage/events.delete/${ event.id }" class="btn btn-danger">Delete</a>
+##                                           </div>
+##                                         </div>
+##                                       </div>
+##                                    </div>
+
                                 </div>
                             </td>
                         </tr>

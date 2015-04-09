@@ -7,28 +7,22 @@ import homepage.models as hmod
 from django_mako_plus.controller.router import get_renderer
 from django.contrib.auth.decorators import permission_required
 
-
 templater = get_renderer('homepage')
 
 
-
 @view_function
-##@permission_required('admin.manager_rights', '/homepage/login/')
-
+# @permission_required('admin.manager_rights', '/homepage/login/')
 def process_request(request):
-
     params = {}
 
     params['events'] = hmod.Event.objects.all().order_by('start_date')
 
-    return templater.render_to_response(request, 'events.html', params)
+    return templater.render_to_response(request, 'events.view.html', params)
 
-########## Edit
+
 @view_function
-##@permission_required('admin.manager_rights', '/homepage/login/')
-
+# @permission_required('admin.admin_rights', '/homepage')
 def edit(request):
-
     params = {}
 
     try:
@@ -60,10 +54,10 @@ def edit(request):
 
 
 class EventEditForm(forms.Form):
-    name = forms.CharField(required=True, max_length=100)
-    description = forms.CharField(required=True, max_length=300)
-    start_date = forms.DateField(required=True)
-    end_date = forms.DateField(required=True)
+    name = forms.CharField(max_length=25, required=True, label='Name', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    description = forms.CharField(max_length=25, required=True, label='Description', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    start_date = forms.DateField(required=True, label='Start Date', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    end_date = forms.DateField(required=True, label='End Date', widget=forms.TextInput(attrs={'class': 'form-control'}))
 
     # def clean_username(self):
     #   if len(self.cleaned_data['username']) < 5
@@ -75,12 +69,9 @@ class EventEditForm(forms.Form):
     #       pass #we want this because it meas that the username is free
 
 
-### create new
 @view_function
-##@permission_required('admin.manager_rights', '/homepage/login/')
-
+# @permission_required('admin.admin_rights', '/homepage')
 def create(request):
-
     event = hmod.Event()
     event.name = ''
     event.description = ''
@@ -90,27 +81,23 @@ def create(request):
 
     return HttpResponseRedirect('/homepage/events.edit/{}/'.format(event.id))
 
-### delete
-@view_function
-##@permission_required('admin.manager_rights', '/homepage/login/')
 
+@view_function
+# @permission_required('admin.admin_rights', '/homepage')
 def delete(request):
 
     try:
         event = hmod.Event.objects.get(id=request.urlparams[0])
+        event.delete()
     except hmod.Event.DoesNotExist:
         return HttpResponseRedirect('/homepage/events')
-
-    event.delete()
 
     return HttpResponseRedirect('/homepage/events/')
 
 
 @view_function
-##@permission_required('admin.manager_rights', '/homepage/login/')
-
+# @permission_required('admin.manager_rights', '/homepage/login/')
 def details(request):
-
     params = {}
 
     try:
@@ -126,6 +113,15 @@ def details(request):
     params['event'] = event
     params['products'] = products
 
-   # params['supername'] = supername
+    # params['supername'] = supername
 
     return templater.render_to_response(request, 'events.detail.html', params)
+
+@view_function
+# @permission_required('admin.admin_rights', '/homepage')
+def manage(request):
+    params = {}
+
+    params['events'] = hmod.Event.objects.all().order_by('start_date')
+
+    return templater.render_to_response(request, 'events.html', params)

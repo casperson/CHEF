@@ -178,7 +178,6 @@ class RentableItem(NonSaleItem):
     times_rented = models.IntegerField(default=0)
     rental_price = models.DecimalField(max_digits=6, decimal_places=2)
     price_per_day = models.DecimalField(max_digits=4, decimal_places=2)
-    replacement_price = models.DecimalField(max_digits=8, decimal_places=2)
     condition = models.CharField(max_length=20, default='Good')
 
     def __str__(self):

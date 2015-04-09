@@ -1,8 +1,8 @@
-<%inherit file="/homepage/templates/base_ajax.htm"/>
+<%inherit file="base_ajax.htm"/>
 
 <%block name="content">
 
-    <form class="form-horizontal" id="UserEditForm" method="POST" action="/account/user.edit/${ user.id }">
+    <form class="form-horizontal" id="RentalEditForm" method="POST">
         <table>
             %for field in form:
                 <div class="form-group">
@@ -14,7 +14,7 @@
             %endfor
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-9">
-                    <button class="btn btn-success" type="submit">Create Account</button>
+                    <button class="btn btn-success" type="submit">Save Rental Item</button>
                 </div>
             </div>
         </table>

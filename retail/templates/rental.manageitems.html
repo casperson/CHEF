@@ -1,0 +1,117 @@
+<%inherit file="/homepage/templates/base.htm" />
+
+<%block name="content_center">
+<div>
+        <h2 style="text-decoration: underline">Rentable Items</h2>
+
+    <div style="margin-top: 10px" class="container-fluid">
+
+        <div style="margin-top: 10px">
+            <p>
+                <a href="/retail/rental.create/normal/" class="btn btn-success">Add New Rental Item</a>
+                <a href="/retail/rental.create/wardrobe/" class="btn btn-success">Add New Wardrobe Item</a>
+            </p>
+        <h3>Rentable Items</h3>
+           <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+                <tr>
+                    <th>Rentable Item Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Rental Price</th>
+                    <th>Price Per Day</th>
+                    <th>Value</th>
+                    <th>Edit | Delete</th>
+                </tr>
+                    %for rentableitem in rentableitems:
+                        <tr>
+                            <td>${ rentableitem.name }</td>
+                            <td>${ rentableitem.description }</td>
+                            <td>${ rentableitem.category.description }</td>
+                            <td>${ rentableitem.rental_price}</td>
+                            <td>${ rentableitem.price_per_day}</td>
+                            <td>${ rentableitem.value}</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button data-pid=${ rentableitem.id } type="button" class="btn btn-default RentalEditForm"><i class="fa fa-edit"></i></button>
+                                    <button data-rid=${ rentableitem.id } type="button" class="btn btn-danger DeleteRentalItem"><i class="fa fa-trash"></i></button>
+
+##                                    <button type="button" data-toggle="modal" data-target="#form-modal" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+##                                    <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+##                                        <div class="modal-dialog">
+##                                          <div class="modal-content">
+##                                            <div class="modal-header">
+##                                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+##                                              <h4 class="modal-title">Delete Warning</h4>
+##                                            </div>
+##                                            <div id="form-modal-body" class="modal-body">
+##                                                <p> Are you sure you want to DELETE "${ rentableitem.name }"</p>
+##                                           </div>
+##                                           <div class="modal-footer">
+##                                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+##                                             <a href="/retail/rental.delete/${ rentableitem.id }" class="btn btn-danger">Delete</a>
+##                                           </div>
+##                                         </div>
+##                                       </div>
+##                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    %endfor
+           </table>
+        <h3>Wardrobe Items</h3>
+            <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
+                <tr>
+                    <th>Wardrobe Item Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Rental Price</th>
+                    <th>Price Per Day</th>
+                    <th>Value</th>
+                    <th>Color</th>
+                    <th>Gender</th>
+                    <th>Size</th>
+                    <th>Edit | Delete</th>
+                </tr>
+                    %for wardrobeitem in wardrobeitems:
+                        <tr>
+                            <td>${ wardrobeitem.name }</td>
+                            <td>${ wardrobeitem.description }</td>
+                            <td>${ wardrobeitem.category.description }</td>
+                            <td>${ wardrobeitem.rental_price}</td>
+                            <td>${ wardrobeitem.price_per_day}</td>
+                            <td>${ wardrobeitem.value}</td>
+                            <td>${ wardrobeitem.color}</td>
+                            <td>${ wardrobeitem.gender}</td>
+                            <td>${ wardrobeitem.size}</td>
+                            <td>
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button data-pid=${ wardrobeitem.id } type="button" class="btn btn-default WardrobeEditForm"><i class="fa fa-edit"></i></button>
+                                    <button data-wid=${ wardrobeitem.id } type="button" class="btn btn-danger DeleteWardrobeItem"><i class="fa fa-trash"></i></button>
+
+##                                    <button type="button" data-toggle="modal" data-target="#form-modal" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+##                                    <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+##                                        <div class="modal-dialog">
+##                                          <div class="modal-content">
+##                                            <div class="modal-header">
+##                                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+##                                              <h4 class="modal-title">Delete Warning</h4>
+##                                            </div>
+##                                            <div id="form-modal-body" class="modal-body">
+##                                                <p> Are you sure you want to DELETE "${ wardrobeitem.name }"</p>
+##                                           </div>
+##                                           <div class="modal-footer">
+##                                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+##                                             <a href="/retail/rental.delete/${ wardrobeitem.id }" class="btn btn-danger">Delete</a>
+##                                           </div>
+##                                         </div>
+##                                       </div>
+##                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    %endfor
+           </table>
+        </div>
+    </div>
+</div>
+</%block>

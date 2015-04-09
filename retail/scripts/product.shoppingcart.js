@@ -21,7 +21,10 @@ $(function(){
              var rid =  $(this).attr('data-rid');
             $.ajax({
                 url: '/retail/rental.delete_rental_item/' + rid
+                //success: function(data) {
+                //}
             });
+            //$('#jquery-loadmodal-js-body').reload()
 
         });
 

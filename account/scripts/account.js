@@ -1,7 +1,5 @@
 $(function(){
 
-    var userid = $(this).attr('data-pid');
-
     $('#change_password_dialog').on('click', function() {
 
         $.loadmodal({
@@ -14,6 +12,7 @@ $(function(){
 
     $('#user_edit').on('click', function() {
 
+        var userid = $(this).attr('data-pid');
             $.loadmodal({
                 url: '/account/user.edit/' + userid + '/',
                 title: 'Edit Account',

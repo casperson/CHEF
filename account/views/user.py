@@ -8,6 +8,7 @@ from django_mako_plus.controller.router import get_renderer
 from django import forms
 from django.contrib.auth.decorators import permission_required
 from .. import dmp_render_to_response, dmp_render
+import datetime
 
 templater = get_renderer('account')
 
@@ -44,7 +45,6 @@ def edit(request):
         'state': address.state,
         'zip': address.zip,
         'phone': user.phone,
-        'date_joined': user.date_joined,
         'security_question': user.security_question,
         'security_answer': user.security_answer,
 
@@ -64,7 +64,6 @@ def edit(request):
             address.city = form.cleaned_data['city']
             address.state = form.cleaned_data['state']
             address.zip = form.cleaned_data['zip']
-            user.date_joined = form.cleaned_data['date_joined']
             user.phone = form.cleaned_data['phone']
             user.security_question = form.cleaned_data['security_question']
             user.security_answer = form.cleaned_data['security_answer']
@@ -85,20 +84,18 @@ def edit(request):
 
 
 class UserEditForm(forms.Form):
-    username = forms.CharField(max_length=25, required=True)
-    password = forms.CharField(widget=forms.PasswordInput, required=True)
-    first_name = forms.CharField(max_length=20, required=True)
-    last_name = forms.CharField(max_length=20, required=True)
-    date_joined = forms.DateField(required=True)
-    address = forms.CharField(max_length=50, required=True)
-    city = forms.CharField(max_length=20, required=True)
-    state = forms.CharField(max_length=2, required=True)
-    zip = forms.CharField(max_length=9, required=True)
-    email = forms.CharField(max_length=40, required=True)
-    phone = forms.CharField(max_length=15, required=True)
-    security_question = forms.CharField(max_length=100, required=True)
-    security_answer = forms.CharField(max_length=50, required=True)
-    # role = forms.CharField(max_length=30, required=True)
+    username = forms.CharField(max_length=25, required=True, label='Username', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}), required=True, label='Password')
+    first_name = forms.CharField(max_length=20, required=True, label='First Name', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    last_name = forms.CharField(max_length=20, required=True, label='Last Name', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    address = forms.CharField(max_length=50, required=True, label='Address', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    city = forms.CharField(max_length=20, required=True, label='City', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    state = forms.CharField(max_length=2, required=True, label='State', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    zip = forms.CharField(max_length=9, required=True, label='Zip Code', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    email = forms.CharField(max_length=40, required=True, label='Email', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    phone = forms.CharField(max_length=15, required=True, label='Phone', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    security_question = forms.CharField(max_length=100, required=True, label='Security Question', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    security_answer = forms.CharField(max_length=50, required=True, label='Security Answer', widget=forms.TextInput(attrs={'class': 'form-control'}))
 
     def clean_username(self):
         user_count = hmod.User.objects.filter(username=self.cleaned_data['username']).exclude(id=self.userid).count()
@@ -127,6 +124,7 @@ def create(request):
     user.last_name = ''
     user.phone = ''
     user.email = ''
+    user.date_joined = datetime.datetime.now().date()
     user.security_question = ''
     user.security_answer = ''
     user.save()
@@ -146,12 +144,12 @@ def create(request):
 # @permission_required('admin.manager_rights', '/homepage/login')
 def delete(request):
 
+    print(request.urlparams[0])
     try:
         user = hmod.User.objects.get(id=request.urlparams[0])
+        user.delete()
     except hmod.User.DoesNotExist:
         return HttpResponseRedirect('/account/user/')
-
-    user.delete()
 
     return HttpResponseRedirect('/account/user/')
 

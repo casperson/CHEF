@@ -72,9 +72,9 @@ def changepassword(request):
 
 
 class ChangePasswordForm(forms.Form):
-    password = forms.CharField(widget=forms.PasswordInput, required=True)
-    newpassword = forms.CharField(max_length=25, required=True)
-    checkpassword = forms.CharField(max_length=25, required=True)
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}), required=True, label='Current Password')
+    newpassword = forms.CharField(max_length=25, required=True, label='New Password', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+    checkpassword = forms.CharField(max_length=25, required=True, label='Confirm New Password', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
 
     # def clean_password(self):
     #     if 'newpassword' in self.cleaned_data and 'checkpassword' in self.cleaned_data:

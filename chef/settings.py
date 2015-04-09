@@ -41,7 +41,6 @@ INSTALLED_APPS = (
     'homepage',
     'account',
     'retail',
-    'bootstrapform',
     'password_reset',
 )
 

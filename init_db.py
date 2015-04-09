@@ -389,3 +389,12 @@ for data in [
     v.area = data[2]
     v.historical_figure = data[3]
     v.save()
+
+    user = hmod.User.objects.get(id=1)
+    user.user_permissions.add(permission1)
+    user.groups.add(group)
+    # user.user_permissions.add(permission2)
+    # user.user_permissions.add(permission3)
+
+    user = hmod.User.objects.get(id=2)
+    user.user_permissions.add(permission3)

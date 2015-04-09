@@ -12,7 +12,6 @@ from django.core import management
 from django.core.mail import send_mail
 import datetime
 import decimal
-import pprint
 
 templater = get_renderer('retail')
 
@@ -41,42 +40,46 @@ def edit(request):
     form = ProductEditForm(initial={
         'name': product.name,
         'description':product.description,
-        'category': product.category,
+        'category': product.category.description,
         'price': product.price
     })
 
     if request.method == 'POST':
         form = ProductEditForm(request.POST)
         if form.is_valid():
+
             product.name = form.cleaned_data['name']
             product.description = form.cleaned_data['description']
-            product.category = form.cleaned_data['category']
+            product.category = hmod.Category.objects.get(description=form.cleaned_data['category'])
             product.price = form.cleaned_data['price']
             product.save()
-        return HttpResponseRedirect('/retail/product/')
+        return HttpResponseRedirect('/retail/product.manage/')
 
     params['form'] = form
-    params['retail'] = product
+    params['product'] = product
 
     return templater.render_to_response(request, 'product.edit.html', params)
 
 
 class ProductEditForm(forms.Form):
-    name = forms.CharField(max_length=50, required=True)
-    description = forms.CharField(max_length=200, required=False)
-    category = forms.CharField(max_length=20, required=True)
-    price = forms.CharField(max_length=10, required=False)
+    name = forms.CharField(max_length=50, required=True, label='Name', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    description = forms.CharField(max_length=200, required=False, label='Description', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    category = forms.CharField(max_length=20, required=True, label='Category', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    price = forms.CharField(max_length=10, required=True, label='Price', widget=forms.TextInput(attrs={'class': 'form-control'}))
 
 
 @view_function
-@permission_required('admin.agent_rights', '/retail/login')
+# @permission_required('admin.agent_rights', '/retail/login')
 def create(request):
-    '''Create a new retail'''
+    # Create a new product
+    category = hmod.Category.objects.get(id=1)
     product = hmod.Product()
     product.name = ''
     product.description = ''
-    product.category = ''
-    product.current_price = 0.00
+    product.category = category
+    product.qty_on_hand = 5
+    product.date_made = datetime.datetime.now().date()
+    product.price = 0.00
     product.save()
 
     return HttpResponseRedirect('/retail/product.edit/{}/'.format(product.id))
@@ -114,6 +117,34 @@ def delete_line_item(request):
             ''')
 
     # return HttpResponseRedirect('retail/product.shoppingcart.html')
+
+
+@view_function
+# @permission_required('admin.agent_rights', '/retail/login')
+def delete_rental_item(request):
+    params = {}
+
+    try:
+        rentalitem = hmod.RentalLineItem.objects.get(id=request.urlparams[0])
+        lineitem = hmod.LineItem.objects.get(rental_line_item=rentalitem)
+        rentalitem.delete()
+        lineitem.delete()
+    except hmod.RentalLineItem.DoesNotExist:
+        return HttpResponseRedirect('/retail/product/')
+
+    lineitems = hmod.LineItem.objects.all().filter(shopping_cart=cart, rental_line_item=None, return_line_item=None)
+    rentalitems = hmod.LineItem.objects.all().filter(shopping_cart=cart, product=None, return_line_item=None)
+    returnitems = hmod.LineItem.objects.all().filter(shopping_cart=cart, product=None, rental_line_item=None)
+
+    params['lineitems'] = lineitems
+    params['rentalitems'] = rentalitems
+    params['returnitems'] = returnitems
+
+    return HttpResponse('''
+                <script>
+                    window.location.href = window.location.href;
+                </script>
+            ''', params)
 
 
 @view_function
@@ -262,11 +293,11 @@ def batch(request):
 def overduereport(request):
     params = {}
 
-    rentals = hmod.RentalLineItem.objects.all()
+    rentals = hmod.RentalLineItem.objects.all().filter(returned=False)
     overdues = []
-    thirty =[]
+    thirty = []
     sixty = []
-    ninety =[]
+    ninety = []
 
     now = datetime.datetime.now().date()
 
@@ -284,9 +315,9 @@ def overduereport(request):
             fee = hmod.RentableItem.objects.get(id=overdue.wardrobe_item.id)
 
         item = hmod.LineItem.objects.get(rental_line_item=overdue)
-        print(item)
+
         # shoppingcart = hmod.ShoppingCart.objects.get(user=item.shopping_cart)
-        user = hmod.User.objects.get(id=item.shopping_cart.user_id)
+        user = hmod.User.objects.get(id=item.user_id)
         dayslatecalc = now - overdue.date_due
         dayslate = dayslatecalc.days.numerator
 
@@ -313,3 +344,14 @@ def overduereport(request):
     params['ninety'] = ninety
 
     return dmp_render_to_response(request, 'overdue_report.html',params)
+
+
+@view_function
+# @permission_required('admin.agent_rights' , '/homepage/login')
+def manage(request):
+    params = {}
+
+    products = hmod.Product.objects.all().order_by('name')
+    params['products'] = products
+
+    return dmp_render_to_response(request, 'product.manage.html', params)

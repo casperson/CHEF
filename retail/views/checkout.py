@@ -104,7 +104,7 @@ def payment(request):
     taxrate = Decimal(0.065)
     tax = round((rentaltotal + producttotal) * taxrate, 2)
     total = round(rentaltotal + producttotal + tax, 2)
-    subtotal = round((total - tax),2)
+    subtotal = round((total - tax), 2)
 
     API_URL = 'http://dithers.cs.byu.edu/iscore/api/v1/charges'
     API_KEY = 'ffbe4a3ef6b5eb7099b271e312851d76'

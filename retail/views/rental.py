@@ -9,6 +9,7 @@ from django import forms
 from django.contrib.auth.decorators import permission_required, login_required
 from .. import dmp_render_to_response, dmp_render
 from django.core import management
+import lib.widgets
 import datetime
 templater = get_renderer('retail')
 
@@ -252,8 +253,8 @@ class WardrobeEditForm(forms.Form):
     Size = forms.CharField(max_length=10, label='Size', widget=forms.TextInput(attrs={'class': 'form-control'}))
     Size_Modifier = forms.CharField(max_length=10, label='Size Modifier', widget=forms.TextInput(attrs={'class': 'form-control'}))
     Pattern = forms.CharField(max_length=20, required=True, label='Pattern', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    Start_Year = forms.DateField(required=True, label='Start Year', widget=forms.DateInput(attrs={'class': 'form-control'}))
-    End_Year = forms.DateField(required=True, label='End Year', widget=forms.DateInput(attrs={'class': 'form-control'}))
+    Start_Year = forms.DateField(required=True, label='Start Year', widget=lib.widgets.DateDropdown(attrs={'class': 'form-control'}))
+    End_Year = forms.DateField(required=True, label='End Year', widget=lib.widgets.DateDropdown(attrs={'class': 'form-control'}))
 
 
 @view_function

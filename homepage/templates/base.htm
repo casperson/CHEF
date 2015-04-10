@@ -27,6 +27,10 @@
         <script src="${ STATIC_URL }homepage/media/jquery.loadmodal.js"></script>
         <script src="${ STATIC_URL }homepage/media/jquery.form.js"></script>
 
+        ## Add Datepicker widget javascript and css
+        <script src="${STATIC_URL}datetimepicker-master/jquery.datetimepicker.js"></script>
+        <link rel="stylesheet" href="${STATIC_URL}datetimepicker-master/jquery.datetimepicker.css"/>
+
 
         ## render the css with the same name as this page
         ${ static_renderer.get_template_css(request, context)  }

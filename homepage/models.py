@@ -2,7 +2,6 @@ __author__ = 'Group 2-5'
 
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from polymorphic import PolymorphicModel
 from decimal import Decimal
 import datetime
 

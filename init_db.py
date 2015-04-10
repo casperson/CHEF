@@ -287,8 +287,8 @@ for data in [
     u.save()
 
 for data in [
-    ['2015-04-15', '2015-04-20', 10, hmod.RentableItem.objects.get(id=7)],
-    ['2015-04-26', '2015-04-28', 5, hmod.RentableItem.objects.get(id=8)],
+    ['2015-02-15', '2015-04-20', 10, hmod.RentableItem.objects.get(id=7)],
+    ['2015-01-24', '2015-04-28', 5, hmod.RentableItem.objects.get(id=8)],
 ]:
 
     rr = hmod.RentalLineItem()
@@ -299,8 +299,8 @@ for data in [
     rr.save()
 
 for data in [
-    ["2015-2-15", 2.50, "Pee stain", 1, 1.00, hmod.RentalLineItem.objects.get(id=1)],
-    ["2015-2-15", 0.00, "", 5, 5.50, hmod.RentalLineItem.objects.get(id=1)]
+    ["2015-04-10", 2.50, "Pee stain", 1, 1.00, hmod.RentalLineItem.objects.get(id=1)],
+    ["2015-02-15", 0.00, "", 5, 5.50, hmod.RentalLineItem.objects.get(id=1)]
 ]:
     ret = hmod.ReturnLineItem()
     ret.date_in = data[0]

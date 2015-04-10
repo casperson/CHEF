@@ -4,7 +4,7 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1428647164.785866
+_modified_time = 1428654357.199405
 _enable_loop = True
 _template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\homepage\\templates/base.htm'
 _template_uri = 'base.htm'
@@ -19,10 +19,10 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        request = context.get('request', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         def content_center():
             return render_content_center(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
-        request = context.get('request', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n')
@@ -39,7 +39,12 @@ def render_body(context,**pageargs):
         __M_writer(str( STATIC_URL ))
         __M_writer('homepage/media/jquery.loadmodal.js"></script>\r\n        <script src="')
         __M_writer(str( STATIC_URL ))
-        __M_writer('homepage/media/jquery.form.js"></script>\r\n\r\n\r\n')
+        __M_writer('homepage/media/jquery.form.js"></script>\r\n\r\n')
+        __M_writer('        <script src="')
+        __M_writer(str(STATIC_URL))
+        __M_writer('datetimepicker-master/jquery.datetimepicker.js"></script>\r\n        <link rel="stylesheet" href="')
+        __M_writer(str(STATIC_URL))
+        __M_writer('datetimepicker-master/jquery.datetimepicker.css"/>\r\n\r\n\r\n')
         __M_writer('        ')
         __M_writer(str( static_renderer.get_template_css(request, context)  ))
         __M_writer('\r\n\r\n    </head>\r\n\r\n    <body>\r\n\r\n        <header>\r\n            <link rel="icon" type="image/x-icon" href="/static/homepage/media/colonial_flag.jpg" />\r\n            <div id="div-head"></div>\r\n            <div class="container-fluid">\r\n                <div class="col-xs-3" >\r\n                    <a href=/homepage/index/>\r\n                        <img src="/static/homepage/media/ch_logo.png" height="75">\r\n                    </a>\r\n                </div>\r\n                <div class="col-xs-2"></div>\r\n                <div class="col-xs-7" style="text-align: right;margin-top: 20px">\r\n')
@@ -84,6 +89,6 @@ def render_content_center(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\homepage\\templates/base.htm", "line_map": {"64": 98, "65": 106, "66": 106, "67": 106, "73": 96, "79": 96, "16": 4, "18": 0, "85": 79, "28": 2, "29": 4, "30": 5, "34": 5, "35": 13, "36": 16, "37": 22, "38": 27, "39": 27, "40": 27, "41": 28, "42": 28, "43": 32, "44": 32, "45": 32, "46": 49, "47": 50, "48": 50, "49": 50, "50": 52, "51": 53, "52": 56, "53": 57, "54": 58, "55": 76, "56": 77, "57": 82, "58": 83, "59": 85}, "source_encoding": "ascii", "uri": "base.htm"}
+{"source_encoding": "ascii", "uri": "base.htm", "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\homepage\\templates/base.htm", "line_map": {"64": 89, "69": 102, "70": 110, "71": 110, "72": 110, "78": 100, "16": 4, "18": 0, "84": 100, "90": 84, "28": 2, "29": 4, "30": 5, "34": 5, "35": 13, "36": 16, "37": 22, "38": 27, "39": 27, "40": 27, "41": 28, "42": 28, "43": 31, "44": 31, "45": 31, "46": 32, "47": 32, "48": 36, "49": 36, "50": 36, "51": 53, "52": 54, "53": 54, "54": 54, "55": 56, "56": 57, "57": 60, "58": 61, "59": 62, "60": 80, "61": 81, "62": 86, "63": 87}}
 __M_END_METADATA
 """

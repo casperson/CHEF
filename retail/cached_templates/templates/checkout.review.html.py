@@ -4,7 +4,7 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1428426289.636323
+_modified_time = 1428653143.390087
 _enable_loop = True
 _template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\retail\\templates/checkout.review.html'
 _template_uri = 'checkout.review.html'
@@ -28,16 +28,16 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        subtotal = context.get('subtotal', UNDEFINED)
-        tax = context.get('tax', UNDEFINED)
+        total = context.get('total', UNDEFINED)
         def content_center():
             return render_content_center(context._locals(__M_locals))
-        len = context.get('len', UNDEFINED)
         lineitems = context.get('lineitems', UNDEFINED)
+        subtotal = context.get('subtotal', UNDEFINED)
+        tax = context.get('tax', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        returnitems = context.get('returnitems', UNDEFINED)
-        total = context.get('total', UNDEFINED)
+        len = context.get('len', UNDEFINED)
         rentalitems = context.get('rentalitems', UNDEFINED)
+        returnitems = context.get('returnitems', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content_center'):
@@ -53,20 +53,20 @@ def render_body(context,**pageargs):
 def render_content_center(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        subtotal = context.get('subtotal', UNDEFINED)
-        tax = context.get('tax', UNDEFINED)
+        total = context.get('total', UNDEFINED)
         def content_center():
             return render_content_center(context)
-        len = context.get('len', UNDEFINED)
         lineitems = context.get('lineitems', UNDEFINED)
+        subtotal = context.get('subtotal', UNDEFINED)
+        tax = context.get('tax', UNDEFINED)
         STATIC_URL = context.get('STATIC_URL', UNDEFINED)
-        returnitems = context.get('returnitems', UNDEFINED)
-        total = context.get('total', UNDEFINED)
+        len = context.get('len', UNDEFINED)
         rentalitems = context.get('rentalitems', UNDEFINED)
+        returnitems = context.get('returnitems', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n    <div>\r\n        <p></p>\r\n    </div>\r\n\r\n    <div class="container">\r\n        <p id="love" class="list-group-item-heading">Checkout: easy as 1, 2, 3!</p>\r\n        <div class="row form-group">\r\n            <div class="col-xs-12">\r\n                <ul class="nav nav-pills nav-justified thumbnail setup-panel">\r\n                    <li class="active"><a href="#step-1">\r\n                        <h4 class="list-group-item-heading">Step 1: Review</h4>\r\n                    </a></li>\r\n                    <li class="disabled"><a href="#step-2">\r\n                        <h4 class="list-group-item-heading">Step 2: Shipping and Payment</h4>\r\n                    </a></li>\r\n                    <li class="disabled"><a href="#step-3">\r\n                        <h4 class="list-group-item-heading">Step 3: Confirmation</h4>\r\n                    </a></li>\r\n                </ul>\r\n            </div>\r\n        </div>\r\n        <div class="row setup-content" id="step-1">\r\n            <div class="col-xs-12">\r\n                <div class="col-md-12 well text-center">\r\n')
         __M_writer('                    <div class="container">\r\n                        <div class="row">\r\n                            <div class="col-xs-8">\r\n                                <div class="panel panel-info">\r\n                                    <div class="panel-heading">\r\n                                        <div class="panel-title">\r\n                                            <div class="row">\r\n                                                <div class="col-xs-6">\r\n                                                    <h5><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart Review</h5>\r\n                                                </div>\r\n                                                <div class="col-xs-6">\r\n                                                    <button type="button" class="btn btn-primary btn-sm btn-block">\r\n                                                        <span class="glyphicon glyphicon-share-alt"></span> Continue shopping\r\n                                                    </button>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div class="panel-body">\r\n')
-        if len(lineitems):
+        if len(lineitems) > 0:
             __M_writer('                                            <h3>Sale Items</h3>\r\n')
         for lineitem in lineitems:
             __M_writer('                                        <div class="row">\r\n                                            <div class="col-xs-2"><img class="img-responsive" src="')
@@ -110,6 +110,6 @@ def render_content_center(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"uri": "checkout.review.html", "source_encoding": "ascii", "line_map": {"27": 0, "42": 1, "47": 162, "53": 3, "67": 3, "68": 30, "69": 49, "70": 50, "71": 52, "72": 53, "73": 54, "74": 54, "75": 54, "76": 54, "77": 57, "78": 57, "79": 61, "80": 61, "81": 64, "82": 64, "83": 75, "84": 76, "85": 78, "86": 79, "87": 83, "88": 83, "89": 87, "90": 87, "91": 101, "92": 102, "93": 104, "94": 105, "95": 109, "96": 109, "97": 113, "98": 113, "99": 127, "100": 143, "101": 143, "102": 144, "103": 144, "104": 145, "105": 145, "111": 105}, "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\retail\\templates/checkout.review.html"}
+{"source_encoding": "ascii", "uri": "checkout.review.html", "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\retail\\templates/checkout.review.html", "line_map": {"27": 0, "42": 1, "47": 162, "53": 3, "67": 3, "68": 30, "69": 49, "70": 50, "71": 52, "72": 53, "73": 54, "74": 54, "75": 54, "76": 54, "77": 57, "78": 57, "79": 61, "80": 61, "81": 64, "82": 64, "83": 75, "84": 76, "85": 78, "86": 79, "87": 83, "88": 83, "89": 87, "90": 87, "91": 101, "92": 102, "93": 104, "94": 105, "95": 109, "96": 109, "97": 113, "98": 113, "99": 127, "100": 143, "101": 143, "102": 144, "103": 144, "104": 145, "105": 145, "111": 105}}
 __M_END_METADATA
 """

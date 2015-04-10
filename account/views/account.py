@@ -19,7 +19,14 @@ def process_request(request):
     params = {}
 
     cart = hmod.ShoppingCart.objects.get(user_id=request.user.id)
-    lineitems = hmod.LineItem.objects.all().filter(shopping_cart=cart, product=None, return_line_item=None)
+    lineitems = []
+    rentalitems = hmod.RentalLineItem.objects.all().filter(returned=False)
+    for rentalitem in rentalitems:
+        try:
+            lineitem = hmod.LineItem.objects.get(rental_line_item=rentalitem)
+            lineitems.append(lineitem)
+        except hmod.LineItem.DoesNotExist:
+            pass
 
     params['lineitems'] = lineitems
 

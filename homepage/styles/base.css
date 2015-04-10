@@ -9,7 +9,12 @@ body{
 }
 
 .base-body{
-    background-color: #ffffff;
+    background-color: #FFFFFF;
+}
+
+h1{
+    font-family: 'Roboto Slab', serif;
+    color: #231E5D;
 }
 
 h2{
@@ -35,6 +40,18 @@ h3{
 .email-body{
     border-bottom: solid 1px grey;
 }
+
+#homeCarousel{
+    width: 103%;
+    margin: 0px 30px 0px -15px
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      max-height: 500px;
+      max-width: 100%;
+      margin: auto;
+  }
 
 .div-head{
     /*background-image: -webkit-gradient(*/
@@ -83,7 +100,7 @@ header {
 /*}*/
 
 .side-div{
-    background-color: #231E5D;
+    background-color: #231D5C;
     height: 1500px;
 }
 

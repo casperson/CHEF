@@ -8,7 +8,7 @@ from django_mako_plus.controller.router import get_renderer
 from django import forms
 from django.contrib.auth.decorators import permission_required
 from .. import dmp_render_to_response, dmp_render
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 templater = get_renderer('account')
 
@@ -29,7 +29,7 @@ def process_request(request):
 @view_function
 # @permission_required('admin.manager_rights', '/homepage/login')
 def changepassword(request):
-    params ={}
+    params = {}
 
     try:
         user = hmod.User.objects.get(id=request.user.id)
@@ -87,3 +87,11 @@ class ChangePasswordForm(forms.Form):
     #     if cleaned_data['newpassword'] != cleaned_data['checkpassword']:
     #         raise forms.ValidationError('The entered passwords do not match.')
     #     return cleaned_data['newpassword']
+
+
+@view_function
+def logout_user(request):
+
+    logout(request)
+
+    return HttpResponseRedirect('/homepage/')

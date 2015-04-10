@@ -1,5 +1,16 @@
 $(function(){
 
+        $('.UserCreate').on('click', function() {
+
+            $.loadmodal({
+                url: '/account/user.create/',
+                title: 'Create Account',
+                width: '500px'
+            });
+
+        });
+
+
         $('.UserEdit').on('click', function() {
 
             var userid = $(this).attr('data-pid');

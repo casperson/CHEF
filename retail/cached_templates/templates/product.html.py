@@ -4,7 +4,7 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1427395997.006875
+_modified_time = 1428646445.024032
 _enable_loop = True
 _template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\retail\\templates/product.html'
 _template_uri = 'product.html'
@@ -38,7 +38,6 @@ def render_body(context,**pageargs):
             context['self'].content_center(**pageargs)
         
 
-        __M_writer('\r\n\r\n\r\n\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -52,22 +51,23 @@ def render_content_center(context,**pageargs):
         def content_center():
             return render_content_center(context)
         __M_writer = context.writer()
-        __M_writer('\r\n\r\n    <div>\r\n        <h3 style="text-decoration: underline">Product List</h3>\r\n\r\n        <div class="text-right">\r\n            <a href="/homepage/product.create/" class="btn btn-success">Add New Product</a>\r\n        <a href="/retail/product.batch/" class="btn btn-primary">See Overdue Rentals</a>\r\n        </div>\r\n\r\n        <form id="search" method="post" action="product.search">\r\n            <input/>\r\n            <a href="/retail/product.search/" class="btn btn-info">Search Product</a>\r\n        </form>\r\n            <ul id="product_list">\r\n')
+        __M_writer('\r\n\r\n    <div>\r\n        <h2 style="text-decoration: underline">Products</h2>\r\n        <a href="/retail/product/" class="btn btn-success"><i class="fa fa-plus"></i> Request Custom Product</a>\r\n')
+        __M_writer('\r\n')
+        __M_writer('\r\n        <div class="pull-right">\r\n            <input placeholder=" Search Products" id="search"/>\r\n        </div>\r\n\r\n        <ul id="product_list">\r\n')
         for product in products:
-            __M_writer('                <li>\r\n')
-            __M_writer('                        <img class="description product-image" src="')
+            __M_writer('            <li>\r\n                <div>\r\n                    <img class="description product-image" src="')
             __M_writer(str( STATIC_URL ))
             __M_writer('retail/media/')
             __M_writer(str( product.name ))
-            __M_writer('.jpg/">\r\n                        <a href="/retail/product.detail/')
+            __M_writer('.jpg/">\r\n                </div>\r\n                <div>\r\n                    <a href="/retail/product.detail/')
             __M_writer(str( product.id ))
             __M_writer('/">')
             __M_writer(str( product.name ))
-            __M_writer('</a>\r\n                        <p>')
+            __M_writer('</a>\r\n                </div>\r\n                    <p>$')
             __M_writer(str( product.price ))
             __M_writer('</p>\r\n')
-            __M_writer('                </li>\r\n')
-        __M_writer('            </ul>\r\n        </div>\r\n')
+            __M_writer('            </li>\r\n')
+        __M_writer('        </ul>\r\n        </div>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -75,6 +75,6 @@ def render_content_center(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "ascii", "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\retail\\templates/product.html", "uri": "product.html", "line_map": {"64": 22, "65": 22, "66": 22, "27": 0, "36": 1, "69": 29, "68": 23, "41": 33, "76": 70, "70": 31, "47": 3, "67": 23, "55": 3, "56": 18, "57": 19, "58": 21, "59": 21, "60": 21, "61": 21, "62": 21, "63": 22}}
+{"line_map": {"64": 24, "65": 24, "66": 24, "27": 0, "36": 1, "69": 32, "68": 26, "76": 70, "70": 34, "46": 3, "67": 26, "54": 3, "55": 9, "56": 12, "57": 18, "58": 19, "59": 21, "60": 21, "61": 21, "62": 21, "63": 24}, "uri": "product.html", "source_encoding": "ascii", "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\retail\\templates/product.html"}
 __M_END_METADATA
 """

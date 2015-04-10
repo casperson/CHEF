@@ -4,7 +4,7 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1425772843.505102
+_modified_time = 1428556267.744011
 _enable_loop = True
 _template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\account\\templates/account.changepassword.html'
 _template_uri = 'account.changepassword.html'
@@ -23,14 +23,14 @@ def _mako_generate_namespaces(context):
     pass
 def _mako_inherit(template, context):
     _mako_generate_namespaces(context)
-    return runtime._inherit_from(context, '/homepage/templates/base_ajax.htm', _template_uri)
+    return runtime._inherit_from(context, 'base_ajax.htm', _template_uri)
 def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        form = context.get('form', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
-        form = context.get('form', UNDEFINED)
         user = context.get('user', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n')
@@ -46,18 +46,23 @@ def render_body(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        form = context.get('form', UNDEFINED)
         def content():
             return render_content(context)
-        form = context.get('form', UNDEFINED)
         user = context.get('user', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\r\n\r\n    <form id="ChangePasswordForm" method="POST" action="/account/account.changepassword/')
+        __M_writer('\r\n\r\n    <form class="form-horizontal" id="ChangePasswordForm" method="POST" action="/account/account.changepassword/')
         __M_writer(str( user.id ))
-        __M_writer('">\r\n        <table>\r\n            ')
-        __M_writer(str( form ))
-        __M_writer('\r\n            ')
-        __M_writer(str( form.errors ))
-        __M_writer('\r\n        </table>\r\n        <button type="submit">Submit</button>\r\n    </form>\r\n\r\n')
+        __M_writer('">\r\n        <table>\r\n')
+        for field in form:
+            __M_writer('                <div class="form-group">\r\n                    <label for="id_')
+            __M_writer(str(field.name))
+            __M_writer('" class="col-sm-3 control-label">')
+            __M_writer(str(field.label))
+            __M_writer('</label>\r\n                    <div class="col-sm-9">\r\n                        ')
+            __M_writer(str(field))
+            __M_writer('\r\n                    </div>\r\n                </div>\r\n')
+        __M_writer('            <div class="form-group">\r\n                <div class="col-sm-offset-3 col-sm-9">\r\n                    <button class="btn btn-success" type="submit">Change Password</button>\r\n                </div>\r\n            </div>\r\n        </table>\r\n\r\n    </form>\r\n\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -65,6 +70,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "ascii", "uri": "account.changepassword.html", "line_map": {"66": 60, "59": 8, "36": 1, "54": 3, "55": 5, "56": 5, "57": 7, "58": 7, "27": 0, "60": 8, "46": 3}, "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\account\\templates/account.changepassword.html"}
+{"line_map": {"64": 11, "65": 15, "27": 0, "36": 1, "71": 65, "46": 3, "54": 3, "55": 5, "56": 5, "57": 7, "58": 8, "59": 9, "60": 9, "61": 9, "62": 9, "63": 11}, "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\account\\templates/account.changepassword.html", "uri": "account.changepassword.html", "source_encoding": "ascii"}
 __M_END_METADATA
 """

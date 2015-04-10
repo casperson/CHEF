@@ -28,7 +28,7 @@ def edit(request):
     try:
         event = hmod.Event.objects.get(id=request.urlparams[0])
     except hmod.Event.DoesNotExist:
-        return HttpResponseRedirect('/homepage/events')
+        return HttpResponseRedirect('/homepage/events.manage')
 
     form = EventEditForm(initial={
 
@@ -36,28 +36,32 @@ def edit(request):
         'description': event.description,
         'start_date': event.start_date,
         'end_date': event.end_date,
-
     })
+
     if request.method == 'POST':
+        print(request.method)
         form = EventEditForm(request.POST)
         if form.is_valid():
+
             event.name = form.cleaned_data['name']
             event.description = form.cleaned_data['description']
             event.start_date = form.cleaned_data['start_date']
             event.end_date = form.cleaned_data['end_date']
             event.save()
-            return HttpResponseRedirect('/homepage/events')
+
+            return HttpResponseRedirect('/homepage/events.manage')
 
 
     params['form'] = form
+    params['event'] = event
     return templater.render_to_response(request, 'events.edit.html', params)
 
 
 class EventEditForm(forms.Form):
-    name = forms.CharField(max_length=25, required=True, label='Name', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    description = forms.CharField(max_length=25, required=True, label='Description', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    start_date = forms.DateField(required=True, label='Start Date', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    end_date = forms.DateField(required=True, label='End Date', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    name = forms.CharField(required=True, label='Name', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    description = forms.CharField(required=True, label='Description', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    start_date = forms.DateField(required=True, label='Start Date', widget=forms.DateInput(attrs={'class': 'form-control'}))
+    end_date = forms.DateField(required=True, label='End Date', widget=forms.DateInput(attrs={'class': 'form-control'}))
 
     # def clean_username(self):
     #   if len(self.cleaned_data['username']) < 5
@@ -77,6 +81,7 @@ def create(request):
     event.description = ''
     event.start_date = '1901-1-1'
     event.end_date = '1901-1-1'
+    event.address = hmod.Address.objects.get(id=2)
     event.save()
 
     return HttpResponseRedirect('/homepage/events.edit/{}/'.format(event.id))
@@ -90,9 +95,9 @@ def delete(request):
         event = hmod.Event.objects.get(id=request.urlparams[0])
         event.delete()
     except hmod.Event.DoesNotExist:
-        return HttpResponseRedirect('/homepage/events')
+        return HttpResponseRedirect('/homepage/events.manage/')
 
-    return HttpResponseRedirect('/homepage/events/')
+    return HttpResponseRedirect('/homepage/events.manage/')
 
 
 @view_function

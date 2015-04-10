@@ -1,5 +1,15 @@
 $(function(){
 
+        $('#product-create').on('click', function() {
+
+            $.loadmodal({
+                url: '/retail/product.create/',
+                title: 'Create Product Item',
+                width: '500px'
+            });
+
+        });
+
         $('.ProductEditForm').on('click', function() {
 
             var productid = $(this).attr('data-pid');

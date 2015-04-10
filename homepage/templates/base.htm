@@ -48,7 +48,7 @@
                 <div class="col-xs-7" style="text-align: right;margin-top: 20px">
                     %if request.user.is_authenticated():
                         Welcome, ${ request.user.get_full_name() }
-                        <a role="logout"><a class="btn btn-danger btn-xs" href="/homepage/logout/">Log Out</a>
+                        <a role="logout"><a class="btn btn-danger btn-xs" href="/account/account.logout_user/">Log Out</a>
                     %else:
                         <button id="show_login_dialog" class="btn btn-success">Login</button>
                         <button id="create_account_btn" class="btn btn-warning">Create Account</button>
@@ -70,14 +70,14 @@
                             <li role="phone"><a href="/retail/product/">Product List</a></li>
                             <li role="rentals"><a href="/retail/rental/">Rentable Items</a></li>
                             <li role="festivals"><a href="/homepage/events/">Festivals</a></li>
-                            <li><a href="/../account/account/">My Account</a></li>
+                            <li><a href="/account/account/">My Account</a></li>
                             <li><button class="btn btn-warning" id="shopping_cart_dialog2"><i class="fa fa-shopping-cart"></i> Shopping Cart</button></li>
                             <br/>
                         %elif request.user.is_authenticated():
                            <li role="phone"><a href="/retail/product/">Product List</a></li>
                            <li role="rentals"><a href="/retail/rental/">Rentable Items</a></li>
                            <li role="festivals"><a href="/homepage/events.view/">Festivals</a></li>
-                           <li><a href="/../account/account/">My Account</a></li>
+                           <li><a href="/account/account/">My Account</a></li>
                            <li><button class="btn btn-warning" id="shopping_cart_dialog2"><i class="fa fa-shopping-cart"></i> Shopping Cart</button></li>
                         %else:
                             <li role="festivals"><a href="/homepage/events/">Festivals</a></li>
@@ -89,7 +89,7 @@
         </header>
 
         <div class="container-fluid base-body">
-            <div class="col-xs-1" style="background-color: navy; height: 1000px">
+            <div class="col-xs-1 side-div">
 
             </div>
             <div class="col-xs-10">
@@ -97,7 +97,7 @@
 
                 </%block>
             </div>
-            <div class="col-xs-1" style="background-color: navy; height: 1000px">
+            <div class="col-xs-1 side-div">
 
             </div>
         </div>

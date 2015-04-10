@@ -1,5 +1,27 @@
 $(function(){
 
+        $('#create-rental').on('click', function() {
+
+            $.loadmodal({
+                url: '/retail/rental.create/normal/',
+                title: 'Create Rental Item',
+                width: '500px'
+            });
+
+        });
+
+
+        $('#create-wardrobe').on('click', function() {
+
+            $.loadmodal({
+                url: '/retail/rental.create/wardrobe/',
+                title: 'Create Wardrobe Item',
+                width: '500px'
+            });
+
+        });
+
+
         $('.WardrobeEditForm').on('click', function() {
 
             var wardrobeid = $(this).attr('data-pid');

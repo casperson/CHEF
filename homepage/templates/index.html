@@ -6,7 +6,54 @@
 </head>
 
 <%block name="content_center">
-    <div class="container-fluid">
+    <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#homeCarousel" data-slide-to="1"></li>
+            <li data-target="#homeCarousel" data-slide-to="2"></li>
+            <li data-target="#homeCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="${STATIC_URL}homepage/media/chef_military.jpg" alt="...">
+                <div class="carousel-caption">
+                    <h2>The Military</h2>
+                </div>
+            </div>
+            <div class="item">
+                <img src="${STATIC_URL}homepage/media/chef_pottery.jpg" alt="...">
+                <div class="carousel-caption">
+                    <h2>The Potter</h2>
+                </div>
+            </div>
+            <div class="item">
+                <img src="${STATIC_URL}homepage/media/chef_peddler.jpg" alt="...">
+                <div class="carousel-caption">
+                    <h2>The Peddler</h2>
+                </div>
+            </div>
+                <div class="item">
+                <img src="${STATIC_URL}homepage/media/chef_cannon.jpg" alt="...">
+                <div class="carousel-caption">
+                    <h2>The Cannon</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div>
         <h1>The Colonial Heritage Foundation</h1>
         <p>The Colonial Heritage Foundation (the Foundation) is a 501(c)(3) corporation dedicated to the preservation of the values, culture, skills and history of America's founding. To accomplish this mission, the Foundation engages in a broad array of activities. Among these are the development and presentation of educational exhibits, the coordination of reading and discussion groups to encourage the study of America's historical writings, the presentation of lectures and seminars regarding America's founding era, the coordination of historical reenactments and skill demonstrations, and the coordination of internships and apprenticeships that teach the occupational skills of early America.</p>
         <br/>
@@ -20,7 +67,5 @@
         <br/>
         <h3>Reading and Discussion Groups</h3>
         <p>The Foundation coordinates and helps to establish community groups to encourage the reading and discussion of America's historical documents. For example, the Federalist Papers and the Anti-federalist Papers were publications that made the argument for and against the adoption of America's current constitution. The study and discussion of these documents can help Americans today understand the issues that were of most concern to our founding generation regarding the establishment of a strong federal government. These documents were written in a language style that is foreign to most contemporary readers. By providing recommended reading schedules, discussion questions, and materials to help modern readers read and grasp federal-period writings, the Foundation hopes to encourage small, community-based groups to undertake independent study of such founding documents. These discussion groups will be conducted year-round by volunteers and held in homes or community meeting places throughout the nation. </p>
-        <br/>
-        <div class="col-xs-8" style="margin-top: 10px; margin-left: 400px"><img src="/static/homepage/media/colonial_flag.jpg" height="400"></div>
     </div>
 </%block>

@@ -232,7 +232,7 @@ def editwardrobeitem(request):
             wardrobeitem.pattern = form.cleaned_data['Pattern']
             wardrobeitem.size_modifier = form.cleaned_data['Size_Modifier']
             wardrobeitem.save()
-        return HttpResponseRedirect('/retail/rental.manageitems/')
+            return HttpResponseRedirect('/retail/rental.manageitems/')
 
     params['form'] = form
     params['wardrobeitem'] = wardrobeitem
@@ -244,16 +244,16 @@ class WardrobeEditForm(forms.Form):
     Name = forms.CharField(max_length=50, required=True, label='Name', widget=forms.TextInput(attrs={'class': 'form-control'}))
     Description = forms.CharField(max_length=200, required=False, label='Description', widget=forms.TextInput(attrs={'class': 'form-control'}))
     Category = forms.CharField(max_length=20, required=True, label='Category', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    Rental_Price = forms.CharField(max_length=10, required=True, label='Rental Price', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    Price_Per_Day = forms.CharField(max_length=10, required=True, label='Price Per Day', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    Value = forms.CharField(max_length=10, required=True, label='Value', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    Rental_Price = forms.DecimalField(max_digits=10, required=True, label='Rental Price', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    Price_Per_Day = forms.DecimalField(max_digits=10, required=True, label='Price Per Day', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    Value = forms.DecimalField(max_digits=10, required=True, label='Value', widget=forms.TextInput(attrs={'class': 'form-control'}))
     Gender = forms.CharField(max_length=1, required=True, label='Gender', widget=forms.TextInput(attrs={'class': 'form-control'}))
     Color = forms.CharField(max_length=10, required=True, label='Color', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    Size = forms.CharField(max_length=10, required=True, label='Size', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    Size_Modifier = forms.CharField(max_length=10, required=True, label='Size Modifier', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    Size = forms.CharField(max_length=10, label='Size', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    Size_Modifier = forms.CharField(max_length=10, label='Size Modifier', widget=forms.TextInput(attrs={'class': 'form-control'}))
     Pattern = forms.CharField(max_length=20, required=True, label='Pattern', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    Start_Year = forms.DateField(required=True, label='Start Year', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    End_Year = forms.DateField(required=True, label='End Year', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    Start_Year = forms.DateField(required=True, label='Start Year', widget=forms.DateInput(attrs={'class': 'form-control'}))
+    End_Year = forms.DateField(required=True, label='End Year', widget=forms.DateInput(attrs={'class': 'form-control'}))
 
 
 @view_function

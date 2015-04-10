@@ -126,7 +126,7 @@ class Event(models.Model):
     map_filename = models.CharField(max_length=100, blank=True, null=True)
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
-    address = models.OneToOneField(Address)
+    address = models.ForeignKey(Address)
 
     def __str__(self):
         return '{} {} {}'.format(self.start_date, self.map_filename)

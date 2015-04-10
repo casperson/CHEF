@@ -6,10 +6,9 @@
 
     <div style="margin-top: 10px" class="container-fluid">
 
+    <button id="create-event" class="btn btn-success">Add New Festival</button>
+        <br/>
         <div style="margin-top: 10px">
-            <p>
-                <a href="/homepage/events.create/" class="btn btn-success">Add New Festival</a>
-            </p>
 
            <table class="table table-striped" style="background-color: white; border: .5px solid #DDDDDD">
                 <tr>
@@ -23,14 +22,14 @@
                     %for event in events:
                         <tr>
 
-                            <td><a href="/homepage/events.details/${ event.id }"> ${ event.name }<a/> </td>
+                            <td><a href="/homepage/events.details/${ event.id }"> ${ event.name }</a> </td>
                             <td>${ event.description }</td>
                             <td>${ event.start_date }</td>
                             <td>${ event.end_date }</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="...">
                                     <button data-pid=${ event.id } type="button" class="btn btn-default EventEditForm"><i class="fa fa-edit"></i></button>
-                                    <button data-eid=${ event.id }type="button" class="btn btn-danger delete-event"><i class="fa fa-trash"></i></button>
+                                    <button data-eid=${ event.id } type="button" class="btn btn-danger delete-event"><i class="fa fa-trash"></i></button>
 
 ##                                    <button type="button" data-toggle="modal" data-target="#form-modal" class="btn btn-danger"><i class="fa fa-trash"></i></button>
 ##                                    <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

@@ -2,7 +2,7 @@
 
 <%block name="content">
 
-    <form class="form-horizontal" id="ProductEditForm" method="POST">
+    <form class="form-horizontal" id="ProductEditForm" method="POST" action="/retail/product.edit/${ product.id }">
         <table>
             %for field in form:
                 <div class="form-group">

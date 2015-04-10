@@ -271,25 +271,6 @@ class LineItemEditForm(forms.Form):
 
 
 @view_function
-# @permission_required('admin.admin_rights', '/homepage/login/')
-def search(request):
-    params = {}
-
-    search = hmod.Product.objects.filter(name__icontains=request.urlparams[0])
-
-    params['search'] = search
-
-    return templater.render_to_response(request, '/retail/product.search.html', params)
-
-
-@view_function
-def batch(request):
-    params = {}
-    # management.call_command('check_rentals', request)
-    return dmp_render_to_response(request, 'check_rentals.html', params)
-
-
-@view_function
 def overduereport(request):
     params = {}
 

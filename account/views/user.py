@@ -72,7 +72,7 @@ def edit(request):
 
             return HttpResponse('''
             <script>
-                window.location.href = '/account/user/';
+                window.location.href = '/homepage/';
             </script>
             ''')
 
@@ -136,6 +136,10 @@ def create(request):
     address.zip = ''
     address.user = hmod.User.objects.get(id=user.id)
     address.save()
+
+    shoppingcart = hmod.ShoppingCart()
+    shoppingcart.user = user
+    shoppingcart.save()
 
     return HttpResponseRedirect('/account/user.edit/{}/'.format(user.id))
 

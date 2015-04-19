@@ -4,7 +4,7 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1428644550.600152
+_modified_time = 1428684875.146794
 _enable_loop = True
 _template_filename = 'C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\account\\templates/user.edit.html'
 _template_uri = 'user.edit.html'
@@ -30,8 +30,8 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         def content():
             return render_content(context._locals(__M_locals))
-        form = context.get('form', UNDEFINED)
         user = context.get('user', UNDEFINED)
+        form = context.get('form', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content'):
@@ -48,8 +48,8 @@ def render_content(context,**pageargs):
     try:
         def content():
             return render_content(context)
-        form = context.get('form', UNDEFINED)
         user = context.get('user', UNDEFINED)
+        form = context.get('form', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\r\n\r\n    <form class="form-horizontal" id="UserEditForm" method="POST" action="/account/user.edit/')
         __M_writer(str( user.id ))
@@ -62,7 +62,7 @@ def render_content(context,**pageargs):
             __M_writer('</label>\r\n                    <div class="col-sm-9">\r\n                        ')
             __M_writer(str(field))
             __M_writer('\r\n                    </div>\r\n                </div>\r\n')
-        __M_writer('            <div class="form-group">\r\n                <div class="col-sm-offset-3 col-sm-9">\r\n                    <button class="btn btn-success" type="submit">Create Account</button>\r\n                </div>\r\n            </div>\r\n        </table>\r\n\r\n    </form>\r\n\r\n')
+        __M_writer('            <div class="form-group">\r\n                <div class="col-sm-offset-3 col-sm-9">\r\n                    <button class="btn btn-success" type="submit">Save</button>\r\n                </div>\r\n            </div>\r\n        </table>\r\n\r\n    </form>\r\n\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -70,6 +70,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"uri": "user.edit.html", "line_map": {"64": 11, "65": 15, "27": 0, "36": 1, "71": 65, "46": 3, "54": 3, "55": 5, "56": 5, "57": 7, "58": 8, "59": 9, "60": 9, "61": 9, "62": 9, "63": 11}, "source_encoding": "ascii", "filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\account\\templates/user.edit.html"}
+{"filename": "C:\\Users\\Sterling\\Documents\\GitHub\\CHEF\\account\\templates/user.edit.html", "uri": "user.edit.html", "line_map": {"64": 11, "65": 15, "27": 0, "36": 1, "71": 65, "46": 3, "54": 3, "55": 5, "56": 5, "57": 7, "58": 8, "59": 9, "60": 9, "61": 9, "62": 9, "63": 11}, "source_encoding": "ascii"}
 __M_END_METADATA
 """
